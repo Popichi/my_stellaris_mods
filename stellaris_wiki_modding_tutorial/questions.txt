@@ -1,0 +1,14 @@
+- QUESTION: My Visual Studio Code doesn't have anything under the Outline section. It says that 
+			"No symbols found in document x.txt". Does this mean my CWTools not working properly?
+
+- QUESTION: Regarding the civic_beacon_of_liberty found at 
+            C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\governments\civics\00_civics.txt,
+			what does "potential" do?
+	- Regarding this question I asked a question which can be found at 
+	  https://discord.com/channels/378985949373399040/1242140767955193946
+
+- QUESTION: Regarding the civic_beacon_of_liberty found at 
+            C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\governments\civics\00_civics.txt,
+			what does "possible" do?
+    - Regarding this question I asked a question which can be found at 
+	  https://discord.com/channels/378985949373399040/1242140767955193946
