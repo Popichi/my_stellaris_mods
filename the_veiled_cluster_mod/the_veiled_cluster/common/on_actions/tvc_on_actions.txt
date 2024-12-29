@@ -1,0 +1,7 @@
+# Triggers when the game starts
+on_game_start_country = {
+	events = {
+		tvc.1 # Spawn The Veiled Cluster
+		log = "tvc.1 called!"
+	}
+}
