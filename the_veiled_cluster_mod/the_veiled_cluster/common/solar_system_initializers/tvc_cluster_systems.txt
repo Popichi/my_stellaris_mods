@@ -4,11 +4,17 @@ tvc_home_system_initializer = {
     name = "Eternal Beacon"
     class = sc_b
 
-    # asteroid_belt = {
-    #     type = rocky_asteroid_belt
-    #     radius = 70
-    # }
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 50
+    }
 
+    asteroid_belt = {
+        type = icy_asteroid_belt
+        radius = 275
+    }
+
+    # System's star
     planet = {
         class = star
 		name = "Eternal Beacon"
@@ -17,17 +23,93 @@ tvc_home_system_initializer = {
         orbit_angle = 1
     }
 
+    change_orbit = 50 # Total orbit distance is 50
+
+    planet = {
+        count = 4
+        class = pc_asteroid
+        name = "Bones of Giants"
+        orbit_distance = 0
+        orbit_angle = { min = 0 max = 360 }
+    }
+
+    change_orbit = -50 # Total orbit distance is 0
+
+    planet = {
+        class = pc_shrouded
+		name = "The Veil"
+		size = 45
+		orbit_distance = 105
+        orbit_angle = { min = 0 max = 360 }
+
+        change_orbit = @base_moon_distance
+
+        moon = {
+            class = pc_broken
+			name = "Lost Wanderer"
+			size = 25
+            orbit_distance = 5
+            orbit_angle = { min = 0 max = 360 }
+        }
+
+        moon = {
+            class = pc_toxic
+			name = "Corrupted Wanderer"
+			size = 23
+            orbit_distance = 5
+            orbit_angle = { min = 0 max = 360 }
+        }
+
+        moon = {
+            class = pc_molten
+			name = "Frenzied Wanderer"
+			size = 21
+            orbit_distance = 5
+            orbit_angle = { min = 0 max = 360 }
+        }
+
+        moon = {
+            class = pc_frozen
+			name = "Anguished Wanderer"
+			size = 19
+            orbit_distance = 5
+            orbit_angle = { min = 0 max = 360 }
+        }
+    }  # Total orbit distance is 115
+
+    planet = {
+        class = pc_gas_giant
+		name = "Wayward Brother"
+		size = 40
+		orbit_distance = 70
+        orbit_angle = { min = 0 max = 360 }
+
+        change_orbit = @base_moon_distance
+
+        moon = {
+            class = pc_barren
+			name = "Twin Sisters (Amber)"
+			size = 17
+            orbit_distance = 5
+            orbit_angle = { min = 0 max = 360 }
+        }
+
+        moon = {
+            class = pc_barren_cold
+			name = "Twin Sisters (Silver)"
+			size = 15
+            orbit_distance = 5
+            orbit_angle = { min = 0 max = 360 }
+        }
+    } # Total orbit distance is 195
+
+    # Habitable planets
     planet = {
         class = pc_gaia
 		name = "Veiled Garden"
 		size = 35
-		orbit_distance = 90
-        orbit_angle = { min = 90 max = 270 }
-
-        # init_effect = {
-        #     prevent_anomaly = yes
-        #     generate_primitives_on_planet = yes
-        # }
+		orbit_distance = 70
+        orbit_angle = { min = 0 max = 360 }
 
         change_orbit = @base_moon_distance
 
@@ -36,7 +118,7 @@ tvc_home_system_initializer = {
 			name = "Duskveil"
 			size = 25
             orbit_distance = 5
-            orbit_angle = { min = 90 max = 270 }
+            orbit_angle = { min = 0 max = 360 }
         }
 
 		moon = {
@@ -44,26 +126,21 @@ tvc_home_system_initializer = {
 			name = "Moonshroud"
 			size = 23
             orbit_distance = 10
-            orbit_angle = { min = 90 max = 270 }
+            orbit_angle = { min = 0 max = 360 }
         }
 		
 		moon = {
             class = pc_gaia
 			name = "Gloompeak"
 			size = 21
-            orbit_distance = 15
-            orbit_angle = { min = 90 max = 270 }
+            orbit_distance = 10
+            orbit_angle = { min = 0 max = 360 }
         }
-    }
+    } # Total orbit distance is 275
+
+    # TO DO: Figure out how total orbit distance accumulation works!
 
     # change_orbit = 30
-
-    # planet = {
-    #     count = { min = 1 max = 4 }
-    #     class = pc_asteroid
-    #     orbit_distance = 0
-    #     orbit_angle = { min = 90 max = 270 }
-    # }
 
     # planet = {
     #     count = { min = 3 max = 6 }
