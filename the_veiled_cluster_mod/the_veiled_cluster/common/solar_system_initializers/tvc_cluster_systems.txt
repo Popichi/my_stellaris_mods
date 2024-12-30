@@ -11,8 +11,10 @@ tvc_home_system_initializer = {
 
     asteroid_belt = {
         type = icy_asteroid_belt
-        radius = 275
+        radius = 260
     }
+
+    flags = { tvc_home_system }
 
     # System's star
     planet = {
@@ -33,13 +35,11 @@ tvc_home_system_initializer = {
         orbit_angle = { min = 0 max = 360 }
     }
 
-    change_orbit = -50 # Total orbit distance is 0
-
     planet = {
         class = pc_shrouded
 		name = "The Veil"
 		size = 45
-		orbit_distance = 105
+		orbit_distance = 45
         orbit_angle = { min = 0 max = 360 }
 
         change_orbit = @base_moon_distance
@@ -75,13 +75,13 @@ tvc_home_system_initializer = {
             orbit_distance = 5
             orbit_angle = { min = 0 max = 360 }
         }
-    }  # Total orbit distance is 115
+    }  # Total orbit distance is 95
 
     planet = {
         class = pc_gas_giant
 		name = "Wayward Brother"
 		size = 40
-		orbit_distance = 70
+		orbit_distance = 60
         orbit_angle = { min = 0 max = 360 }
 
         change_orbit = @base_moon_distance
@@ -101,14 +101,14 @@ tvc_home_system_initializer = {
             orbit_distance = 5
             orbit_angle = { min = 0 max = 360 }
         }
-    } # Total orbit distance is 195
+    } # Total orbit distance is 155
 
     # Habitable planets
     planet = {
         class = pc_gaia
 		name = "Veiled Garden"
 		size = 35
-		orbit_distance = 70
+		orbit_distance = 60
         orbit_angle = { min = 0 max = 360 }
 
         change_orbit = @base_moon_distance
@@ -136,11 +136,19 @@ tvc_home_system_initializer = {
             orbit_distance = 10
             orbit_angle = { min = 0 max = 360 }
         }
-    } # Total orbit distance is 275
+    } # Total orbit distance is 215
 
     # TO DO: Figure out how total orbit distance accumulation works!
 
-    # change_orbit = 30
+    change_orbit = 45 # Total orbit distance is 260
+
+    planet = {
+        count = 8
+        class = pc_ice_asteroid
+        name = "Bones of Ice Giants"
+        orbit_distance = 0
+        orbit_angle = { min = 0 max = 360 }
+    }
 
     # planet = {
     #     count = { min = 3 max = 6 }

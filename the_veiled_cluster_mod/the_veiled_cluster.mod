@@ -5,4 +5,4 @@ tags={
 }
 name="The Veiled Cluster"
 supported_version="v3.14.15926"
-path="mod/the_veiled_cluster"
+path="C:/Users/ASUS/Documents/Paradox Interactive/Stellaris/mod/the_veiled_cluster"
