@@ -58,7 +58,7 @@ tvc_home_system_initializer = {
             class = pc_toxic
 			name = "Corrupted Wanderer"
 			size = 23
-            orbit_distance = 5
+            orbit_distance = 9
             orbit_angle = { min = 0 max = 360 }
         }
 
@@ -158,10 +158,10 @@ tvc_system_2 = {
     name = "Artorios"
     class = sc_f
 
-    # asteroid_belt = {
-    #     type = icy_asteroid_belt
-    #     radius = 295
-    # }
+    asteroid_belt = {
+        type = icy_asteroid_belt
+        radius = 175
+    }
 
     flags = { tvc_system_2 }
 
@@ -169,30 +169,105 @@ tvc_system_2 = {
     planet = {
         class = star
 		name = "Artorios"
-        size = 30
+        size = 27
         orbit_distance = 0
         orbit_angle = 1
     }
 
     planet = {
-        class = pc_molten
+        class = "pc_molten"
         name = "Thilios"
-
+        size = 24
         orbit_distance = 40
         orbit_angle = { min = 0 max = 360 }
+
+        moon = {
+            class = pc_barren
+			name = "Mellon"
+			size = 14
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
     } # Total orbit distance is 40
+
+    planet = {
+        class = "pc_gas_giant"
+        name = "Megalos"
+        size = 27
+        orbit_distance = 55
+        orbit_angle = { min = 0 max = 360 }
+        has_ring = no
+
+        moon = {
+            class = pc_gaia
+			name = "Ridoran"
+			size = 25
+            orbit_distance = 20
+            orbit_angle = { min = 0 max = 360 }
+        }
+
+        moon = {
+            class = pc_barren
+			name = "Oudin"
+			size = 14
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
+    } # Total orbit distance is 95
+
+    planet = {
+        class = "pc_barren"
+        name = "Falon"
+        size = 25
+        orbit_distance = 55
+        orbit_angle = { min = 0 max = 360 }
+
+        moon = {
+            class = "pc_molten"
+			name = "Neaden"
+			size = 11
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
+    } # Total orbit distance is 150
+
+    change_orbit = 25 # Total orbit distance is 175
+
+    planet = {
+        count = 5
+        class = "pc_ice_asteroid"
+        name = "Diamond Walls"
+        orbit_distance = 0
+        orbit_angle = { min = 0 max = 360 }
+    }
+
+    planet = {
+        class = "pc_barren_cold"
+        name = "Utul"
+        size = 23
+        orbit_distance = 40
+        orbit_angle = { min = 0 max = 360 }
+
+        moon = {
+            class = "pc_barren_cold"
+			name = "Ridan"
+			size = 12
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
+    } # Total orbit distance is 215
 }
 
 tvc_system_3 = {
     name = "Ithilien"
-    class = sc_a
+    class = "sc_a"
 
-    # asteroid_belt = {
-    #     type = icy_asteroid_belt
-    #     radius = 295
-    # }
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 120
+    }
 
-    flags = { tvc_system_4 }
+    flags = { tvc_system_3 }
 
     # System's star
     planet = {
@@ -204,22 +279,98 @@ tvc_system_3 = {
     }
 
     planet = {
-        class = pc_shrouded
+        class = "pc_shrouded"
         name = "Kadros"
-
+        size = 23
         orbit_distance = 40
         orbit_angle = { min = 0 max = 360 }
+
+        moon = {
+            class = "pc_molten"
+            name = "Telados"
+            size = 16
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
+
+        moon = {
+            class = "pc_barren"
+            name = "Barados"
+            size = 11
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
     } # Total orbit distance is 40
+
+    planet = {
+        class = "pc_gas_giant"
+        name = "Simpferon"
+        size = 25
+        orbit_distance = 50
+        orbit_angle = { min = 0 max = 360 }
+        has_ring = no
+
+        moon = {
+            class = "pc_gaia"
+            name = "Moalen"
+            size = 25
+            orbit_distance = 15
+            orbit_angle = { min = 0 max = 360 }
+        }
+
+        moon = {
+            class = "pc_gaia"
+            name = "Dyma"
+            size = 23
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
+    } # Total orbit distance is 90
+
+    change_orbit = 30 # Total orbit distance is 120
+
+    planet = {
+        count = 3
+        class = "pc_asteroid"
+        name = "Ring of Trials"
+        orbit_distance = 0
+        orbit_angle = { min = 0 max = 360 }
+    }
+
+    planet = {
+        class = "pc_gas_giant"
+        name = "Sieon"
+        size = 25
+        orbit_distance = 30
+        orbit_angle = { min = 0 max = 360 }
+        has_ring = yes
+    } # Total orbit distance is 150
+
+    planet = {
+        class = "pc_frozen"
+        name = "Elion"
+        size = 22
+        orbit_distance = 30
+        orbit_angle = { min = 0 max = 360 }
+
+        moon = {
+            class = "pc_barren_cold"
+            name = "Viasma"
+            size = 17
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
+    } # Total orbit distance is 180
 }
 
 tvc_system_4 = {
     name = "Cidron"
     class = sc_g
 
-    # asteroid_belt = {
-    #     type = icy_asteroid_belt
-    #     radius = 295
-    # }
+    asteroid_belt = {
+        type = icy_asteroid_belt
+        radius = 190
+    }
 
     flags = { tvc_system_4 }
 
@@ -227,28 +378,107 @@ tvc_system_4 = {
     planet = {
         class = star
 		name = "Cidron"
-        size = 30
+        size = 27
         orbit_distance = 0
         orbit_angle = 1
     }
 
     planet = {
-        class = pc_shrouded
-        name = "Kadros"
+        class = "pc_molten"
+        name = "Rorin"
+        size = 25
+        orbit_distance = 30
+        orbit_angle = { min = 0 max = 360 }
 
+        moon = {
+            class = "pc_molten"
+            name = "Vsima"
+            size = 14
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
+    } # Total orbit distance is 30
+
+    planet = {
+        class = "pc_gaia"
+        name = "Eodrith"
+        size = 25
         orbit_distance = 40
         orbit_angle = { min = 0 max = 360 }
-    } # Total orbit distance is 40
+
+        moon = {
+            class = "pc_shrouded"
+            name = "Maorin"
+            size = 18
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
+    } # Total orbit distance is 70
+
+    planet = {
+        class = "pc_toxic"
+        name = "Ureal"
+        size = 25
+        orbit_distance = 40
+        orbit_angle = { min = 0 max = 360 }
+
+        moon = {
+            class = "pc_frozen"
+            name = "Qodvin"
+            size = 14
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
+
+        moon = {
+            class = "pc_barren_cold"
+            name = "Humel"
+            size = 11
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
+    } # Total orbit distance is 110
+
+    planet = {
+        class = "pc_gas_giant"
+        name = "Ureal"
+        size = 25
+        orbit_distance = 50
+        orbit_angle = { min = 0 max = 360 }
+        has_ring = no
+
+        moon = {
+            class = "pc_barren"
+            name = "Poilin"
+            size = 14
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
+
+        moon = {
+            class = "pc_toxic"
+            name = "Humel"
+            size = 11
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
+    } # Total orbit distance is 160
+
+    change_orbit = 30 # Total orbit distance is 190
+
+    planet = {
+        count = 7
+        class = "pc_ice_asteroid"
+        name = "Tears of Nimroth"
+        orbit_distance = 0
+        orbit_angle = { min = 0 max = 360 }
+    }
 }
 
+# Ring World system
 tvc_system_5 = {
     name = "Parikonoi"
     class = sc_k
-
-    # asteroid_belt = {
-    #     type = icy_asteroid_belt
-    #     radius = 295
-    # }
 
     flags = { tvc_system_5 }
 
@@ -256,16 +486,818 @@ tvc_system_5 = {
     planet = {
         class = star
 		name = "Parikonoi"
+        size = 25
+        orbit_distance = 0
+        orbit_angle = 1
+    }
+	
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 100
+	}
+	
+	change_orbit = 45 # Total orbit distance is 45
+
+	planet = {
+        name = "NAME_Habitable_Section_A"
+        class = "pc_ringworld_habitable"
+        size = 5
+        orbit_angle = 30
+        orbit_distance = 0
+        modifiers = none
+        deposit_blockers = none
+    }
+	planet = {
+        name = "NAME_Ring_Section"
+        class = "pc_ringworld_tech"
+        orbit_angle = 30
+        orbit_distance = 0
+    }
+    planet = {
+        name = "NAME_Ring_Section"
+        class = "pc_ringworld_seam"
+        orbit_angle = 30
+        orbit_distance = 0
+    }
+
+    planet = {
+        name = "NAME_Habitable_Section_B"
+        class = "pc_ringworld_habitable"
+        orbit_angle = 30
+        orbit_distance = 0
+        modifiers = none
+        deposit_blockers = none
+    }
+    planet = {
+        name = "NAME_Ring_Section"
+        class = "pc_ringworld_tech"
+        orbit_angle = 30
+        orbit_distance = 0
+
+		init_effect = {
+		    set_deposit = d_physics_2
+		}
+    }
+    planet = {
+        name = "NAME_Ring_Section"
+        class = "pc_ringworld_seam"
+        orbit_angle = 30
+        orbit_distance = 0
+    }
+
+    planet = {
+        name = "NAME_Habitable_Section_C"
+        class = "pc_ringworld_habitable"
+        orbit_angle = 30
+        orbit_distance = 0
+        modifiers = none
+        deposit_blockers = none
+    }
+    planet = {
+        name = "NAME_Ring_Section"
+        class = "pc_ringworld_tech"
+        orbit_angle = 30
+        orbit_distance = 0
+    }
+    planet = {
+        name = "NAME_Ring_Section"
+        class = "pc_ringworld_seam"
+        orbit_angle = 30
+        orbit_distance = 0
+
+		init_effect = {
+		    set_deposit = d_engineering_4
+		}
+    }
+
+    planet = {
+        name = "NAME_Habitable_Section_D"
+        class = "pc_ringworld_habitable"
+        orbit_angle = 30
+        orbit_distance = 0
+        modifiers = none
+        deposit_blockers = none
+    }
+    planet = {
+        name = "NAME_Ring_Section"
+        class = "pc_ringworld_tech"
+        orbit_angle = 30
+        orbit_distance = 0
+		
+		init_effect = {
+		    set_deposit = d_alloys_3
+		}
+    }
+    planet = {
+        name = "NAME_Ring_Section"
+        class = "pc_ringworld_seam"
+        orbit_angle = 30
+        orbit_distance = 0
+		
+		init_effect = {
+			set_deposit = d_exotic_gases_4
+		}
+    }
+	
+	change_orbit = 55 # Total orbit distance is 100
+
+	planet = {
+		count = 4
+		class = "pc_asteroid"
+        name = "Remains of a Dream"
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+	}
+	
+	planet = {
+		class = "pc_gas_giant"
+        name = "Calderon"
+        orbit_distance = 55
+		orbit_angle = { min = 0 max = 360 }
+		size = 25
+        has_ring = yes
+
+		change_orbit = @base_moon_distance
+
+		moon = {
+            class = "pc_gaia"
+            name = "Lomean"
+            size = 23
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
+
+        moon = {
+            class = "pc_barren"
+            name = "Lornan"
+            size = 17
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
+
+        moon = {
+            class = "pc_toxic"
+            name = "Kimlan"
+            size = 13
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
+	} # Total orbit distance is 155
+
+    planet = {
+        class = "pc_shrouded"
+        name = "Mithret"
+        size = 21
+        orbit_distance = 60
+        orbit_angle = { min = 0 max = 360 }
+
+        moon = {
+            class = "pc_shrouded"
+            name = "Curun"
+            size = 9
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
+    } # Total orbit distance is 215
+	
+	planet = {
+		class = "pc_barren_cold"
+        name = "Hiedlin"
+        size = 23
+		orbit_distance = 25
+		orbit_angle = { min = 0 max = 360 }
+	} # Total orbit distance is 240
+	
+}
+
+tvc_system_6 = {
+    name = "Kitaroi"
+    class = sc_f
+
+    asteroid_belt = {
+        type = rocky_asteroid_belt
+        radius = 75
+    }
+
+    asteroid_belt = {
+        type = icy_asteroid_belt
+        radius = 175
+    }
+
+    flags = { tvc_system_6 }
+
+    # System's star
+    planet = {
+        class = star
+		name = "Kitaroi"
         size = 30
         orbit_distance = 0
         orbit_angle = 1
     }
 
     planet = {
+        class = "pc_molten"
+        name = "Sedras"
+        size = 21
+        orbit_distance = 40
+        orbit_angle = { min = 0 max = 360 }
+
+        moon = {
+            class = "pc_toxic"
+            name = "Qun"
+            size = 11
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
+    } # Total orbit distance is 40
+
+    change_orbit = 35 # Total orbit distance is 75
+
+    planet = {
+        count = 2
+        class = "pc_asteroid"
+        name = "Ieo"
+        orbit_distance = 0
+        orbit_angle = { min = 0 max = 360 }
+    }
+
+    planet = {
+        class = "pc_gas_giant"
+        name = "Idras"
+        size = 20
+        orbit_distance = 40
+        orbit_angle = { min = 0 max = 360 }
+        has_ring = yes
+    } # Total orbit distance is 115
+
+    planet = {
+        class = "pc_frozen"
+        name = "Seds"
+        size = 18
+        orbit_distance = 40
+        orbit_angle = { min = 0 max = 360 }
+        has_ring = yes
+
+        moon = {
+            class = "pc_barren_cold"
+            name = "Yvril"
+            size = 7
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
+    } # Total orbit distance is 155
+
+    change_orbit = 20 # Total orbit distance is 175
+    
+    planet = {
+        count = 7
+        class = "pc_ice_asteroid"
+        name = "Orilin"
+        orbit_distance = 0
+        orbit_angle = { min = 0 max = 360 }
+    } 
+}
+
+tvc_system_7 = {
+    name = "Imloth"
+	class = sc_binary_5
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 125
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 240
+	}
+
+	flags = { tvc_system_7 }
+
+	planet = {
+		count = 1
+		class = star
+        name = "Imloth"
+		orbit_distance = 25
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+
+	 planet = {
+		count = 1
+		class = star
+        name = "Imthal"
+		orbit_distance = 0
+		size = { min = 15 max = 25 }
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_molten"
+		orbit_distance = 50
+		orbit_angle = { min = 0 max = 360 }
+
+        moon = {
+            class = "pc_gray_goo"
+            name = "Yilvan"
+            size = 12
+            orbit_distance = @base_moon_distance
+            orbit_angle = { min = 0 max = 360 }
+        }
+	} # Total orbit distance is 50
+
+	planet = {
+		class = "pc_gaia"
+		name = "Uzeal"
+        size = 23
+        orbit_distance = 25
+        orbit_angle = { min = 0 max = 360 }
+        has_ring = yes    
+	} # Total orbit distance is 75
+
+	change_orbit = 25
+
+	planet = {
+		count = 3
+		class = "pc_asteroid"
+        name = "Shattered Remains"
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+	}
+
+	planet = {
+		class = "pc_gaia"
+		name = "Kizeal"
+        size = 25
+        orbit_distance = 25
+        orbit_angle = { min = 0 max = 360 }
+        has_ring = no
+	} # Total orbit distance is 100
+
+	planet = {
+		class = pc_gas_giant
+        name = "Mikoros"
+		orbit_distance = 30
+		orbit_angle = { min = 90 max = 270 }
+		size = 35
+
+		moon = {
+			class = "pc_barren"
+            name = "Mikorosa"
+			orbit_angle = { min = 0 max = 360 }
+			orbit_distance = 16
+		}
+	} # Total orbit distance is 130
+
+	planet = {
+		class = "pc_frozen"
+        name = "Lolun"
+        size = 21
+		orbit_distance = 30
+		orbit_angle = { min = 0 max = 360 }
+	} # Total orbit distance is 160
+
+	change_orbit = 30 # Total orbit distance is 160
+
+	planet = {
+		count = 5
+		class = "pc_ice_asteroid"
+        name = "Weeping Shards"
+		orbit_distance = 0
+		orbit_angle = { min = 0 max = 360 }
+	}
+}
+
+tvc_system_8 = {
+    name = "Volimleth"
+	class = "sc_trinary_2"
+	flags = { tvc_system_8 }
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 185
+	}
+
+	planet = {
+		class = star
+		orbit_distance = 60
+		orbit_angle = 90
+		size = 30
+		has_ring = no
+
+		flags = { main_star }
+	}
+
+	 planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 135
+		size = 30
+		has_ring = no
+	}
+
+	planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		orbit_angle = 90
+		size = 30
+		has_ring = no
+	}
+
+	planet = {
+		class = "pc_gray_goo"
+		orbit_distance = 85
+		orbit_angle = 40
+		size = 25
+		has_ring = no
+	}
+
+	change_orbit = 40
+
+	planet = {
+		count = { min = 2 max = 4 }
+		class = pc_asteroid
+		orbit_distance = 0
+		orbit_angle = { min = 90 max = 270 }
+	}
+
+	planet = {
+		class = "pc_gas_giant"
+		orbit_distance = 40
+		orbit_angle = 165
+		size = 32
+		has_ring = no
+
+		 moon = {
+			class = "pc_gray_goo"
+			size = 20
+			orbit_angle = { min = 90 max = 270 }
+			orbit_distance = 20
+		}
+	}
+
+	planet = {
+		class = "pc_gray_goo"
+		orbit_distance = 45
+		orbit_angle = 165
+		size = 18
+		has_ring = no
+	}
+}
+
+tvc_system_9 = {
+    name = "Targonath"
+    class = "sc_binary_3"
+
+    # asteroid_belt = {
+    #     type = icy_asteroid_belt
+    #     radius = 295
+    # }
+
+    flags = { tvc_system_9 }
+
+    # System's star
+    planet = {
+		count = 1
+		class = star
+		orbit_distance = 25
+		orbit_angle = 1
+		size = { min = 20 max = 30 }
+		has_ring = no
+	}
+
+	 planet = {
+		count = 1
+		class = star
+		orbit_distance = 0
+		size = { min = 15 max = 25 }
+		has_ring = no
+	}
+
+    planet = {
         class = pc_shrouded
-        name = "Mithret"
+        name = "Sedras"
 
         orbit_distance = 40
         orbit_angle = { min = 0 max = 360 }
     } # Total orbit distance is 40
+}
+
+tvc_system_10 = {
+    name = "Fodoloi"
+    class = "sc_trinary_2"
+
+    flags = { tvc_system_10 }
+
+    planet = {
+        class = star
+        size = { min = 30 max = 35 }
+        orbit_distance = 0
+        orbit_angle = 1
+        satellite_naming_policy = upper_case_roman_numerals
+
+        planet = {
+            count = { min = 3 max = 6 }
+            orbit_distance = 20
+            orbit_angle = { min = 90 max = 270 }
+            satellite_naming_policy = lower_case_latin_letters
+
+            change_orbit = @base_moon_distance
+
+            moon = {
+                count = { min = 0 max = 1 }
+                orbit_distance = 5
+                orbit_angle = { min = 90 max = 270 }
+            }
+        }
+    }
+
+    planet = {
+        class = star
+        size = { min = 25 max = 30 }
+        orbit_distance = 230
+        orbit_angle = { min = 90 max = 270 }
+        satellite_naming_policy = upper_case_roman_numerals
+
+        planet = {
+            count = { min = 3 max = 5 }
+            orbit_distance = 20
+            orbit_angle = { min = 90 max = 270 }
+            satellite_naming_policy = lower_case_latin_letters
+
+            change_orbit = @base_moon_distance
+
+            moon = {
+                count = { min = 0 max = 1 }
+                orbit_distance = 5
+                orbit_angle = { min = 90 max = 270 }
+            }
+        }
+    }
+
+    planet = {
+        class = star
+        size = { min = 20 max = 25 }
+        orbit_distance = 0
+        orbit_angle = { min = 90 max = 270 }
+        satellite_naming_policy = upper_case_roman_numerals
+
+        planet = {
+            count = { min = 2 max = 4 }
+            orbit_distance = 20
+            orbit_angle = { min = 90 max = 270 }
+            satellite_naming_policy = lower_case_latin_letters
+
+            change_orbit = @base_moon_distance
+
+            moon = {
+                count = { min = 0 max = 1 }
+                orbit_distance = 5
+                orbit_angle = { min = 90 max = 270 }
+            }
+        }
+    }
+}
+
+tvc_system_11 = {
+    name = "Blinking Spirits"
+    class = "sc_pulsar"
+
+    # asteroid_belt = {
+    #     type = icy_asteroid_belt
+    #     radius = 295
+    # }
+
+    flags = { tvc_system_11 }
+
+    # System's star
+    planet = {
+        class = star
+		name = "Blinking Spirits"
+        size = 25
+        orbit_distance = 0
+        orbit_angle = 1
+    }
+
+    planet = {
+        class = pc_barren
+        name = "Kiperum"
+
+        orbit_distance = 35
+        orbit_angle = { min = 0 max = 360 }
+    } # Total orbit distance is 35
+}
+
+tvc_wormhole_system = {
+	class = "sc_black_hole"
+	name = "Ethereal Night"
+
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 190
+	}
+
+	flags = { tvc_wormhole_system }
+
+	planet = {
+		name = "Ethereal Night"
+		class = "pc_black_hole"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 30
+		has_ring = no
+	}
+
+	change_orbit = 45
+
+	planet = {
+		#name = "NAME_Sel-Ufaan"
+		class = "pc_shattered"
+		orbit_distance = 40
+		orbit_angle = 15
+		size = 10
+		has_ring = no
+	}
+
+	planet = {
+		#name = "NAME_Ten-Aard-Shel"
+		class = "pc_gray_goo"
+		orbit_distance = 25
+		orbit_angle = 125
+		size = 20
+		has_ring = no
+	}
+
+	planet = {
+		#name = "NAME_Diim-Fu-Rem"
+		class = "pc_shattered"
+		orbit_distance = 25
+		orbit_angle = 120
+		size = 16
+		starting_planet = yes
+		has_ring = no
+		deposit_blockers = none
+		modifiers = none
+
+		init_effect = {
+			prevent_anomaly = yes
+		}
+
+		moon = {
+			#name = "NAME_Dora-Fu-Rem"
+			class = "pc_broken"
+			size = { min = 8 max = 22 }
+			orbit_distance = 12
+			orbit_angle = 40
+			has_ring = no
+			entity = "cold_barren_planet_luna_entity"
+		}
+	}
+
+	planet = {
+		#name = "NAME_Naal-Di-Kor"
+		class = "pc_shattered"
+		orbit_distance = 25
+		orbit_angle = 60
+		size = 13
+		has_ring = no
+	}
+
+	planet = {
+		#name = "NAME_Tao-Enar-Vi"
+		class = "pc_asteroid"
+		orbit_distance = 30
+		orbit_angle = -210
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		#name = "NAME_Tao-Fun-Vi"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = -95
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		#name = "NAME_Tao-Arl-Vi"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 285
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		#name = "NAME_Tao-Got-Vi"
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = -80
+		size = 5
+		has_ring = no
+	}
+
+	planet = {
+		#name = "NAME_Gol-Unda-Fiir"
+		class = "pc_gas_giant"
+		orbit_distance = 40
+		orbit_angle = -160
+		size = 35
+		has_ring = no
+		change_orbit = 6
+
+		moon = {
+			#name = "NAME_Dora-Enar-Fiir"
+			class = "pc_barren_cold"
+			size = { min = 8 max = 22 }
+			orbit_distance = 10
+			orbit_angle = 110
+			has_ring = no
+		}
+		moon = {
+			#name = "NAME_Dora-Fun-Fiir"
+			class = "pc_shattered"
+			size = { min = 8 max = 22 }
+			orbit_distance = 4
+			orbit_angle = 100
+			has_ring = no
+		}
+		moon = {
+			#name = "NAME_Dora-Arl-Fiir"
+			class = "pc_frozen"
+			size = { min = 8 max = 22 }
+			orbit_distance = 4
+			orbit_angle = 80
+			has_ring = no
+		}
+		moon = {
+			#name = "NAME_Dora-Got-Fiir"
+			class = "pc_gray_goo"
+			size = { min = 8 max = 22 }
+			orbit_distance = 4
+			orbit_angle = -155
+			has_ring = no
+		}
+	}
+
+	planet = {
+		#name = "NAME_Gol-Umn-Toor"
+		class = "pc_gas_giant"
+		orbit_distance = 25
+		orbit_angle = 170
+		size = 30
+		has_ring = yes
+		entity = "gas_giant_05_entity"
+		change_orbit = 7
+
+		moon = {
+			#name = "NAME_Dora-Enar-Toor"
+			class = "pc_gray_goo"
+			size = { min = 8 max = 22 }
+			orbit_distance = 12
+			orbit_angle = 320
+			has_ring = no
+		}
+	}
+
+	planet = {
+		#name = "NAME_Gol-Salm-Ri"
+		class = "pc_gas_giant"
+		orbit_distance = 25
+		orbit_angle = 125
+		size = 20
+		has_ring = no
+		entity = "gas_giant_03_entity"
+	}
+
+	planet = {
+		#name = "NAME_Gol-Mel-Rood"
+		class = "pc_gas_giant"
+		orbit_distance = 25
+		orbit_angle = -195
+		size = 20
+		has_ring = no
+		entity = "gas_giant_02_entity"
+		change_orbit = 4
+
+		moon = {
+			#name = "NAME_Dora-Enar-Rood"
+			class = "pc_broken"
+			size = { min = 8 max = 22 }
+			orbit_distance = 7
+			orbit_angle = 115
+			has_ring = no
+		}
+	}
+
+	# init_effect = {
+	# 	spawn_megastructure = {
+	# 		type = lgate_base
+	# 		orbit_angle = 225
+	# 		orbit_distance = 360
+	# 	}
+	# }
 }
