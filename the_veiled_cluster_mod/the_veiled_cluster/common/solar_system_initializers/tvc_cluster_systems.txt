@@ -11,10 +11,12 @@ tvc_home_system_initializer = {
 
     asteroid_belt = {
         type = icy_asteroid_belt
-        radius = 260
+        radius = 295
     }
 
     flags = { tvc_home_system }
+
+    usage = custom_empire
 
     # System's star
     planet = {
@@ -81,8 +83,9 @@ tvc_home_system_initializer = {
         class = pc_gas_giant
 		name = "Wayward Brother"
 		size = 40
-		orbit_distance = 60
+		orbit_distance = 75
         orbit_angle = { min = 0 max = 360 }
+        has_ring = yes
 
         change_orbit = @base_moon_distance
 
@@ -90,7 +93,7 @@ tvc_home_system_initializer = {
             class = pc_barren
 			name = "Twin Sisters (Amber)"
 			size = 17
-            orbit_distance = 5
+            orbit_distance = 15
             orbit_angle = { min = 0 max = 360 }
         }
 
@@ -101,17 +104,19 @@ tvc_home_system_initializer = {
             orbit_distance = 5
             orbit_angle = { min = 0 max = 360 }
         }
-    } # Total orbit distance is 155
+    } # Total orbit distance is 170
 
     # Habitable planets
     planet = {
         class = pc_gaia
 		name = "Veiled Garden"
 		size = 35
-		orbit_distance = 60
+		orbit_distance = 80
         orbit_angle = { min = 0 max = 360 }
 
         change_orbit = @base_moon_distance
+
+        home_planet = yes
 
         moon = {
             class = pc_gaia
@@ -136,11 +141,9 @@ tvc_home_system_initializer = {
             orbit_distance = 10
             orbit_angle = { min = 0 max = 360 }
         }
-    } # Total orbit distance is 215
+    } # Total orbit distance is 250
 
-    # TO DO: Figure out how total orbit distance accumulation works!
-
-    change_orbit = 45 # Total orbit distance is 260
+    change_orbit = 45 # Total orbit distance is 295
 
     planet = {
         count = 8
@@ -149,24 +152,120 @@ tvc_home_system_initializer = {
         orbit_distance = 0
         orbit_angle = { min = 0 max = 360 }
     }
+}
 
-    # planet = {
-    #     count = { min = 3 max = 6 }
-    #     orbit_distance = 20
-    #     orbit_angle = { min = 90 max = 270 }
+tvc_system_2 = {
+    name = "Artorios"
+    class = sc_f
 
-    #     change_orbit = @base_moon_distance
-
-    #     moon = {
-    #         count = { min = 0 max = 1 }
-    #         orbit_distance = 5
-    #         orbit_angle = { min = 90 max = 270 }
-    #     }
+    # asteroid_belt = {
+    #     type = icy_asteroid_belt
+    #     radius = 295
     # }
 
-    # neighbor_system = {
-    #     trigger = { num_guaranteed_colonies >= 1 }
-    #     distance = { min = 10 max = @distance }	
-    #     initializer = "sol_neighbor_t1_first_colony"
+    flags = { tvc_system_2 }
+
+    # System's star
+    planet = {
+        class = star
+		name = "Artorios"
+        size = 30
+        orbit_distance = 0
+        orbit_angle = 1
+    }
+
+    planet = {
+        class = pc_molten
+        name = "Thilios"
+
+        orbit_distance = 40
+        orbit_angle = { min = 0 max = 360 }
+    } # Total orbit distance is 40
+}
+
+tvc_system_3 = {
+    name = "Ithilien"
+    class = sc_a
+
+    # asteroid_belt = {
+    #     type = icy_asteroid_belt
+    #     radius = 295
     # }
+
+    flags = { tvc_system_4 }
+
+    # System's star
+    planet = {
+        class = star
+		name = "Ithilien"
+        size = 30
+        orbit_distance = 0
+        orbit_angle = 1
+    }
+
+    planet = {
+        class = pc_shrouded
+        name = "Kadros"
+
+        orbit_distance = 40
+        orbit_angle = { min = 0 max = 360 }
+    } # Total orbit distance is 40
+}
+
+tvc_system_4 = {
+    name = "Cidron"
+    class = sc_g
+
+    # asteroid_belt = {
+    #     type = icy_asteroid_belt
+    #     radius = 295
+    # }
+
+    flags = { tvc_system_4 }
+
+    # System's star
+    planet = {
+        class = star
+		name = "Cidron"
+        size = 30
+        orbit_distance = 0
+        orbit_angle = 1
+    }
+
+    planet = {
+        class = pc_shrouded
+        name = "Kadros"
+
+        orbit_distance = 40
+        orbit_angle = { min = 0 max = 360 }
+    } # Total orbit distance is 40
+}
+
+tvc_system_5 = {
+    name = "Parikonoi"
+    class = sc_k
+
+    # asteroid_belt = {
+    #     type = icy_asteroid_belt
+    #     radius = 295
+    # }
+
+    flags = { tvc_system_5 }
+
+    # System's star
+    planet = {
+        class = star
+		name = "Parikonoi"
+        size = 30
+        orbit_distance = 0
+        orbit_angle = 1
+    }
+
+    planet = {
+        class = pc_shrouded
+        name = "Mithret"
+
+        orbit_distance = 40
+        orbit_angle = { min = 0 max = 360 }
+    } # Total orbit distance is 40
 }

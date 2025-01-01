@@ -27,6 +27,65 @@ country_event = {
 					save_global_event_target_as = tvc_home_system_1
 				}
 			}
+
+			event_target:tvc_home_system_1 = {
+				spawn_system = {
+					min_distance >= 20
+					max_distance <= 20
+					min_orientation_angle = 0
+					max_orientation_angle = 0
+					initializer = tvc_system_2
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = tvc_system_2
+					}
+				}
+				spawn_system = {
+					min_distance >= 20
+					max_distance <= 20
+					min_orientation_angle = 36
+					max_orientation_angle = 36
+					initializer = tvc_system_3
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = tvc_system_3
+					}
+				}
+				spawn_system = {
+					min_distance >= 20
+					max_distance <= 20
+					min_orientation_angle = 72
+					max_orientation_angle = 72
+					initializer = tvc_system_4
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = tvc_system_4
+					}
+				}
+				spawn_system = {
+					min_distance >= 20
+					max_distance <= 20
+					min_orientation_angle = 108
+					max_orientation_angle = 108
+					initializer = tvc_system_5
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = tvc_system_5
+					}
+				}
+				spawn_system = {
+					min_distance >= 20
+					max_distance <= 20
+					min_orientation_angle = 108
+					max_orientation_angle = 108
+					initializer = tvc_system_5
+					hyperlane = no
+					effect = {
+						save_global_event_target_as = tvc_system_5
+					}
+				}
+			}
+
 			# event_target:lcluster1 = {
 			# 	spawn_system = {
 			# 		min_distance >= 29
@@ -126,6 +185,49 @@ country_event = {
 			# }
 		}
 
+		# add hyperlanes
+		event_target:tvc_home_system_1 = {
+			add_hyperlane = {
+				from = event_target:tvc_home_system_1
+				to = event_target:tvc_system_2
+			}
+		}
+		event_target:tvc_home_system_1 = {
+			add_hyperlane = {
+				from = event_target:tvc_home_system_1
+				to = event_target:tvc_system_3
+			}
+		}
+		event_target:tvc_system_2 = {
+			add_hyperlane = {
+				from = event_target:tvc_system_2
+				to = event_target:tvc_system_3
+			}
+		}
+		event_target:tvc_home_system_1 = {
+			add_hyperlane = {
+				from = event_target:tvc_home_system_1
+				to = event_target:tvc_system_4
+			}
+		}
+		event_target:tvc_system_3 = {
+			add_hyperlane = {
+				from = event_target:tvc_system_3
+				to = event_target:tvc_system_4
+			}
+		}
+		event_target:tvc_home_system_1 = {
+			add_hyperlane = {
+				from = event_target:tvc_home_system_1
+				to = event_target:tvc_system_5
+			}
+		}
+		event_target:tvc_system_4 = {
+			add_hyperlane = {
+				from = event_target:tvc_system_4
+				to = event_target:tvc_system_5
+			}
+		}
 		# add hyperlanes
 		# event_target:lcluster5 = {
 		# 	add_hyperlane = {
