@@ -6,19 +6,16 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		#set egs target
-		random_system = {
-			limit = {
-				has_star_flag = tvc_wormhole_system
-			}
+		# First we get TVC wormhole system and then we find an available system to spawn
+		# another wormhole in. Lastly, we link both of these wormholes.
+		event_target:tvc_wormhole_system = {
 			set_star_flag = tvc_wormhole_system_wormhole_spawned
-			save_event_target_as = tvc_wormhole_system
 			spawn_natural_wormhole = {
 				bypass_type = wormhole
 				random_pos = yes
 				orbit_angle = 360
 			}
-			#log = "TVC wormhole system wormhole has been spawned!"
+			log = "TVC wormhole system's wormhole spawned in system: [This.GetName]."
 		}
 		random_system = {
 			limit = {
@@ -31,7 +28,10 @@ country_event = {
 				orbit_angle = 360
 			}
 			link_wormholes = event_target:tvc_wormhole_system
-			#log = "TVC wormhole pair spawned in system: [This.GetName]"
+			save_global_event_target_as = tvc_wormhole_systems_wormhole_pair_system
+			log = "TVC wormhole system's pair wormhole spawned in system: [This.GetName]."
 		}
+
+		country_event = { id = tvc.3 }
 	}
 }

@@ -11,10 +11,10 @@ tvc_home_system_initializer = {
 
     asteroid_belt = {
         type = icy_asteroid_belt
-        radius = 295
+        radius = 315
     }
 
-    flags = { tvc_home_system tvc_system }
+    flags = { tvc_home_system tvc_system empire_cluster }
 
     usage = custom_empire
 
@@ -41,7 +41,7 @@ tvc_home_system_initializer = {
         class = pc_shrouded
 		name = "The Veil"
 		size = 45
-		orbit_distance = 45
+		orbit_distance = 55
         orbit_angle = { min = 0 max = 360 }
 
         change_orbit = @base_moon_distance
@@ -66,7 +66,7 @@ tvc_home_system_initializer = {
             class = pc_molten
 			name = "Frenzied Wanderer"
 			size = 21
-            orbit_distance = 5
+            orbit_distance = 9
             orbit_angle = { min = 0 max = 360 }
         }
 
@@ -74,16 +74,16 @@ tvc_home_system_initializer = {
             class = pc_frozen
 			name = "Anguished Wanderer"
 			size = 19
-            orbit_distance = 5
+            orbit_distance = 9
             orbit_angle = { min = 0 max = 360 }
         }
-    }  # Total orbit distance is 95
+    }  # Total orbit distance is 105
 
     planet = {
         class = pc_gas_giant
 		name = "Wayward Brother"
 		size = 40
-		orbit_distance = 75
+		orbit_distance = 85
         orbit_angle = { min = 0 max = 360 }
         has_ring = yes
 
@@ -104,7 +104,7 @@ tvc_home_system_initializer = {
             orbit_distance = 5
             orbit_angle = { min = 0 max = 360 }
         }
-    } # Total orbit distance is 170
+    } # Total orbit distance is 190
 
     # Habitable planets
     planet = {
@@ -113,10 +113,13 @@ tvc_home_system_initializer = {
 		size = 35
 		orbit_distance = 80
         orbit_angle = { min = 0 max = 360 }
+        home_planet = yes
+        flags = { tvc_home_planet }
+        init_effect = {
+            save_global_event_target_as = tvc_home_planet
+		}
 
         change_orbit = @base_moon_distance
-
-        home_planet = yes
 
         moon = {
             class = pc_gaia
@@ -141,9 +144,9 @@ tvc_home_system_initializer = {
             orbit_distance = 10
             orbit_angle = { min = 0 max = 360 }
         }
-    } # Total orbit distance is 250
+    } # Total orbit distance is 270
 
-    change_orbit = 45 # Total orbit distance is 295
+    change_orbit = 45 # Total orbit distance is 315
 
     planet = {
         count = 8
@@ -163,7 +166,7 @@ tvc_system_2 = {
         radius = 175
     }
 
-    flags = { tvc_system_2 tvc_system }
+    flags = { tvc_system_2 tvc_system empire_cluster }
 
     # System's star
     planet = {
@@ -267,7 +270,7 @@ tvc_system_3 = {
         radius = 120
     }
 
-    flags = { tvc_system_3 tvc_system }
+    flags = { tvc_system_3 tvc_system empire_cluster }
 
     # System's star
     planet = {
@@ -372,7 +375,7 @@ tvc_system_4 = {
         radius = 190
     }
 
-    flags = { tvc_system_4 tvc_system }
+    flags = { tvc_system_4 tvc_system empire_cluster }
 
     # System's star
     planet = {
@@ -480,7 +483,7 @@ tvc_system_5 = {
     name = "Parikonath"
     class = sc_k
 
-    flags = { tvc_system_5 tvc_system }
+    flags = { tvc_system_5 tvc_system empire_cluster }
 
     # System's star
     planet = {
@@ -684,7 +687,7 @@ tvc_system_6 = {
         radius = 175
     }
 
-    flags = { tvc_system_6 tvc_system }
+    flags = { tvc_system_6 tvc_system empire_cluster }
 
     # System's star
     planet = {
@@ -770,7 +773,7 @@ tvc_system_7 = {
 		radius = 240
 	}
 
-	flags = { tvc_system_7 tvc_system }
+	flags = { tvc_system_7 tvc_system empire_cluster }
 
 	planet = {
 		count = 1
@@ -870,7 +873,7 @@ tvc_system_7 = {
 tvc_system_8 = {
     name = "Volimleth"
 	class = "sc_trinary_2"
-	flags = { tvc_system_8 tvc_system }
+	flags = { tvc_system_8 tvc_system empire_cluster }
 
 	asteroid_belt = {
 		type = rocky_asteroid_belt
@@ -965,7 +968,7 @@ tvc_system_8 = {
 tvc_system_9 = {
     name = "Targonath"
     class = "sc_binary_3"
-    flags = { tvc_system_9 tvc_system }
+    flags = { tvc_system_9 tvc_system empire_cluster }
 
     asteroid_belt = {
 		type = icy_asteroid_belt
@@ -1066,7 +1069,7 @@ tvc_system_10 = {
     name = "Fodoleth"
     class = "sc_trinary_2"
 
-    flags = { tvc_system_10 tvc_system }
+    flags = { tvc_system_10 tvc_system empire_cluster }
 
     asteroid_belt = {
         type = icy_asteroid_belt
@@ -1080,6 +1083,7 @@ tvc_system_10 = {
         orbit_distance = 0
         orbit_angle = 1
         satellite_naming_policy = upper_case_roman_numerals
+        flags = { main_star }
 
         planet = {
             class = "pc_molten"
@@ -1280,7 +1284,7 @@ tvc_system_11 = {
         radius = 90
     }
 
-    flags = { tvc_system_11 tvc_system }
+    flags = { tvc_system_11 tvc_system empire_cluster }
 
     # System's star
     planet = {
@@ -1357,7 +1361,7 @@ tvc_wormhole_system = {
 		radius = 190
 	}
 
-	flags = { tvc_wormhole_system tvc_system }
+	flags = { tvc_wormhole_system tvc_system empire_cluster }
 
 	planet = {
 		name = "Malodeth"

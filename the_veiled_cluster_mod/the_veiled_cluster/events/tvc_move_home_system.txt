@@ -1,0 +1,53 @@
+namespace = tvc
+
+# Move the home system
+country_event = {
+	id = tvc.3
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		event_target:tvc_wormhole_system = {
+			log = "TVC home system is: [This.GetName]."
+			event_target:tvc_home_planet = {
+				log = "TVC home planet is: [This.GetName]."
+			}
+		}
+
+		# TO DO: Figure out if you need to modify the code below and then continue adapting the 
+		# code starting from line 82 of 
+		# Steam\steamapps\workshop\content\281990\1999512770\events\egs_colony_events.txt
+		#tag our old home planet
+		capital_scope = {
+			save_event_target_as = previous_home_planet
+			solar_system = {
+				save_event_target_as = previous_home_system
+			}
+			# taken from gigastructures.  Go gigas!
+			if = {
+				limit = { exists = sector }
+				if = {
+					limit = { exists = sector }
+					sector.sector_capital = {
+						leader = {
+							unassign_leader = this
+							save_event_target_as = sector_gov
+						}
+					}
+				}
+			}
+			else = {
+				root = {
+					random_owned_leader = {
+						limit = {
+							is_ruler = no
+							leader_class = official
+						}
+						save_event_target_as = sector_gov
+					}
+				}
+			}
+		}
+
+		#country_event = { id = tvc.2 }
+	}
+}

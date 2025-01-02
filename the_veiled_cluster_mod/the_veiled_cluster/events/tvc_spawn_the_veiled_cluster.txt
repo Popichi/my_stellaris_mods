@@ -26,14 +26,14 @@ country_event = {
 				initializer = tvc_home_system_initializer
 				hyperlane = no
 				effect = {
-					save_global_event_target_as = tvc_home_system_1
+					save_global_event_target_as = tvc_home_system
 				}
 			}
 
 			# We spawn the edges of the decagon in relation to the center of the decagon. This 
 			# is achieved by spawning the edge systems within the scope of the decagon center as 
-			# "event_target:tvc_home_system_1 = { ... }"
-			event_target:tvc_home_system_1 = {
+			# "event_target:tvc_home_system = { ... }"
+			event_target:tvc_home_system = {
 				spawn_system = {
 					min_distance >= 20
 					max_distance <= 20
@@ -171,17 +171,17 @@ country_event = {
 		# Hyperlane connections for TVC system 2
 		# It's hyperlane connection to another edge of the decagon is added while adding the 
 		# hyperlane connections for TVC system 10
-		event_target:tvc_home_system_1 = {
+		event_target:tvc_home_system = {
 			add_hyperlane = {
-				from = event_target:tvc_home_system_1
+				from = event_target:tvc_home_system
 				to = event_target:tvc_system_2
 			}
 		}
 
 		# Hyperlane connections for TVC system 3
-		event_target:tvc_home_system_1 = {
+		event_target:tvc_home_system = {
 			add_hyperlane = {
-				from = event_target:tvc_home_system_1
+				from = event_target:tvc_home_system
 				to = event_target:tvc_system_3
 			}
 		}
@@ -193,9 +193,9 @@ country_event = {
 		}
 
 		# Hyperlane connections for TVC system 4
-		event_target:tvc_home_system_1 = {
+		event_target:tvc_home_system = {
 			add_hyperlane = {
-				from = event_target:tvc_home_system_1
+				from = event_target:tvc_home_system
 				to = event_target:tvc_system_4
 			}
 		}
@@ -207,9 +207,9 @@ country_event = {
 		}
 
 		# Hyperlane connections for TVC system 5
-		event_target:tvc_home_system_1 = {
+		event_target:tvc_home_system = {
 			add_hyperlane = {
-				from = event_target:tvc_home_system_1
+				from = event_target:tvc_home_system
 				to = event_target:tvc_system_5
 			}
 		}
@@ -221,9 +221,9 @@ country_event = {
 		}
 
 		# Hyperlane connections for TVC system 6
-		event_target:tvc_home_system_1 = {
+		event_target:tvc_home_system = {
 			add_hyperlane = {
-				from = event_target:tvc_home_system_1
+				from = event_target:tvc_home_system
 				to = event_target:tvc_system_6
 			}
 		}
@@ -235,9 +235,9 @@ country_event = {
 		}
 
 		# Hyperlane connections for TVC system 7
-		event_target:tvc_home_system_1 = {
+		event_target:tvc_home_system = {
 			add_hyperlane = {
-				from = event_target:tvc_home_system_1
+				from = event_target:tvc_home_system
 				to = event_target:tvc_system_7
 			}
 		}
@@ -249,9 +249,9 @@ country_event = {
 		}
 
 		# Hyperlane connections for TVC system 8
-		event_target:tvc_home_system_1 = {
+		event_target:tvc_home_system = {
 			add_hyperlane = {
-				from = event_target:tvc_home_system_1
+				from = event_target:tvc_home_system
 				to = event_target:tvc_system_8
 			}
 		}
@@ -263,9 +263,9 @@ country_event = {
 		}
 
 		# Hyperlane connections for TVC system 9
-		event_target:tvc_home_system_1 = {
+		event_target:tvc_home_system = {
 			add_hyperlane = {
-				from = event_target:tvc_home_system_1
+				from = event_target:tvc_home_system
 				to = event_target:tvc_system_9
 			}
 		}
@@ -277,9 +277,9 @@ country_event = {
 		}
 
 		# Hyperlane connections for TVC system 10
-		event_target:tvc_home_system_1 = {
+		event_target:tvc_home_system = {
 			add_hyperlane = {
-				from = event_target:tvc_home_system_1
+				from = event_target:tvc_home_system
 				to = event_target:tvc_system_10
 			}
 		}
@@ -293,9 +293,9 @@ country_event = {
 		# Hyperlane connections for TVC system 10
 		# Since this is the last system that is spawned as an edge of the decagon, we connect 
 		# it to system that was first spawned as an edge of the decagon as well.
-		event_target:tvc_home_system_1 = {
+		event_target:tvc_home_system = {
 			add_hyperlane = {
-				from = event_target:tvc_home_system_1
+				from = event_target:tvc_home_system
 				to = event_target:tvc_system_11
 			}
 		}
