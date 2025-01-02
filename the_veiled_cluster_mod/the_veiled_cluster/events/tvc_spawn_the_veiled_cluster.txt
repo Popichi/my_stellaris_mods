@@ -320,5 +320,7 @@ country_event = {
 			}
 		}
 		set_spawn_system_batch = end
+
+		country_event = { id = tvc.2 }
 	}
 }

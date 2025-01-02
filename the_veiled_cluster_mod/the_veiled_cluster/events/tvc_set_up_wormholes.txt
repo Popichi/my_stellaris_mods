@@ -1,0 +1,37 @@
+namespace = tvc
+
+# Set up the wormholes
+country_event = {
+	id = tvc.2
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		#set egs target
+		random_system = {
+			limit = {
+				has_star_flag = tvc_wormhole_system
+			}
+			set_star_flag = tvc_wormhole_system_wormhole_spawned
+			save_event_target_as = tvc_wormhole_system
+			spawn_natural_wormhole = {
+				bypass_type = wormhole
+				random_pos = yes
+				orbit_angle = 360
+			}
+			#log = "TVC wormhole system wormhole has been spawned!"
+		}
+		random_system = {
+			limit = {
+				tvc_suitable_system_for_wormhole = yes
+			}
+			set_star_flag = tvc_wormhole_systems_wormhole_pair_spawned
+			spawn_natural_wormhole = {
+				bypass_type = wormhole
+				random_pos = yes
+				orbit_angle = 360
+			}
+			link_wormholes = event_target:tvc_wormhole_system
+			#log = "TVC wormhole pair spawned in system: [This.GetName]"
+		}
+	}
+}
