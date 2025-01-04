@@ -6,7 +6,7 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
-		event_target:tvc_wormhole_system = {
+		event_target:tvc_home_system = {
 			log = "TVC home system is: [This.GetName]."
 			event_target:tvc_home_planet = {
 				log = "TVC home planet is: [This.GetName]."
@@ -25,13 +25,17 @@ country_event = {
 			# taken from gigastructures.  Go gigas!
 			if = {
 				limit = { exists = sector }
-				if = {
-					limit = { exists = sector }
-					sector.sector_capital = {
-						leader = {
-							unassign_leader = this
-							save_event_target_as = sector_gov
-						}
+
+				sector = {
+					log = "Sector name is: [This.GetName]"
+				}
+
+				sector.sector_capital = {
+					log = "Sector capital name is: [This.GetName]"
+					leader = {
+						unassign_leader = this
+						save_event_target_as = sector_gov
+						log = "Governor's name is: [This.GetName]."
 					}
 				}
 			}
@@ -44,6 +48,34 @@ country_event = {
 						}
 						save_event_target_as = sector_gov
 					}
+				}
+			}
+		}
+
+		# Set up the spaceport
+		# Taken from EGS mod.
+		if = {
+			limit = {
+				is_gestalt = yes
+			}
+			event_target:egs_home_system = {
+				create_starbase = {
+					size = "starbase_starport"
+					module = "shipyard"
+					module = "solar_panel_network"
+					building = "crew_quarters"
+					owner = root
+				}
+			}
+		}
+		else = {
+			event_target:egs_home_system = {
+				create_starbase = {
+					size = "starbase_starport"
+					module = "shipyard"
+					module = "trading_hub"
+					building = "crew_quarters"
+					owner = root
 				}
 			}
 		}

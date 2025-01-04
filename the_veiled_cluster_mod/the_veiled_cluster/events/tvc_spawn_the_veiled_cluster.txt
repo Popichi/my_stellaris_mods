@@ -166,7 +166,7 @@ country_event = {
 		# The edges of the decagon are connected to the center i.e. the home system and the 
 		# previous edge i.e. the previously spawned system. This is true for all systems except 
 		# the last edge of the decagon that is spawned because that one will be connected to the 
-		# first edge of the decagon that was previously spawned.
+		# first edge of the decagon that was previously spawned as well.
 
 		# Hyperlane connections for TVC system 2
 		# It's hyperlane connection to another edge of the decagon is added while adding the 
