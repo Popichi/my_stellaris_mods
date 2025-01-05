@@ -504,7 +504,6 @@ tvc_system_5 = {
 	planet = {
         name = "NAME_Habitable_Section_A"
         class = "pc_ringworld_habitable"
-        size = 5
         orbit_angle = 30
         orbit_distance = 0
         modifiers = none

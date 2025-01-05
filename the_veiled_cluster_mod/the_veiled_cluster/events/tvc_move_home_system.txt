@@ -58,7 +58,7 @@ country_event = {
 			limit = {
 				is_gestalt = yes
 			}
-			event_target:egs_home_system = {
+			event_target:tvc_home_system = {
 				create_starbase = {
 					size = "starbase_starport"
 					module = "shipyard"
@@ -69,7 +69,7 @@ country_event = {
 			}
 		}
 		else = {
-			event_target:egs_home_system = {
+			event_target:tvc_home_system = {
 				create_starbase = {
 					size = "starbase_starport"
 					module = "shipyard"
@@ -79,6 +79,115 @@ country_event = {
 				}
 			}
 		}
+
+		# Set up the capital planet
+		event_target:tvc_home_planet = {
+			remove_deposit = yes
+			remove_planet_flag = starting_deposit
+			remove_planet_flag = starting_mining_target
+			remove_planet_flag = starting_research_target
+			clear_planet_modifiers = yes
+			clear_blockers = yes
+			set_owner = root
+			set_controller = root
+			set_capital = yes			
+			generate_start_deposits_and_blockers = yes
+			tvc_home_planet_generate_start_deposits = yes
+			generate_start_buildings_and_districts = yes			
+		}
+
+		event_target:tvc_home_system = {
+			generate_home_system_resources = yes
+			every_system_planet = {
+				limit = {
+					has_planet_flag = starting_mining_target
+				}
+				create_mining_station = {
+					owner = root
+				}
+			}
+			every_system_planet = {
+				limit = {
+					has_planet_flag = starting_research_target
+				}
+				create_research_station = {
+					owner = root
+				}
+			}
+		}
+
+		every_owned_fleet = {
+			limit = {
+				any_owned_ship = {
+					OR = {
+						is_ship_size = corvette
+						is_ship_size = constructor
+						is_ship_size = science
+					}
+				}
+			}
+			set_location = event_target:tvc_home_system
+		}
+
+		event_target:previous_home_planet = {
+			# move pops
+			every_owned_pop = {
+				resettle_pop = {
+					pop = this
+					planet = event_target:tvc_home_planet
+				}
+				unemploy_pop = yes
+			}
+			# then get rid of the planet
+			#remove_planet = yes
+		}
+
+		# 2.6 introduced a change to the every_owned_pop = { resettle_pop = { loop where it would recalculate jobs between
+		# and end up with unemployed rulers.  
+		# 2.7 has given some simple effects to fix this: force an unemploy, demote to worker and then rerun the employment calculation
+		# 3.3 checnged the pop recalc to only do 1 pop at a time, so to fix need to loop over all pops, but return to planet scope.  
+		event_target:tvc_home_planet = {
+			every_owned_pop = {
+				unemploy_pop = yes
+				clear_pop_category = yes
+			}
+			every_owned_pop = {
+				prev = {
+					check_planet_employment = yes
+				}				
+			}
+			set_sector_capital = yes
+			if = {
+				limit = { exists = event_target:sector_gov}
+				assign_leader = event_target:sector_gov
+			}
+		}
+
+		event_target:previous_home_system = {
+			set_name = random
+			random_system_planet = {
+				limit = {
+					is_star = yes
+				}
+				set_name = solar_system
+			}
+			
+			remove_star_flag = sol
+			remove_star_flag = deneb_system
+		}
+
+		event_target:previous_home_system = {
+			every_fleet_in_system = {
+				delete_fleet = this
+			}
+		}
+
+		owner_species = { 
+			set_species_homeworld = event_target:tvc_home_planet 
+		}
+		every_owned_pop_species = {
+            set_species_homeworld = event_target:tvc_home_planet
+        }
 
 		#country_event = { id = tvc.2 }
 	}
