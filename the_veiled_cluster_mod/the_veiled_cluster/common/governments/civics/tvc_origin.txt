@@ -1,0 +1,9 @@
+origin_tvc = {
+	is_origin = yes
+	icon = "gfx\interface\icons\origins\unused\origins_shroud_touched.dds"
+	picture = "gfx\event_pictures\shroudwalker_enclave.dds"
+	description = "origin_tvc_effects"
+
+	# No random weights because weight = 0 does not actually mean 0 and the AI still takes it.
+	# No random_weight block removes it from the lists
+}

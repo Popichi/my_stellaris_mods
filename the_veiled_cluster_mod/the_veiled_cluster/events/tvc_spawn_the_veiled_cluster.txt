@@ -9,6 +9,10 @@ country_event = {
 
 	fire_only_once = yes
 
+	trigger = {
+		has_origin = origin_tvc
+	}
+
 	immediate = {
 		set_spawn_system_batch = begin
 		# batch-processes the spawn_system effects between "begin" and "end",

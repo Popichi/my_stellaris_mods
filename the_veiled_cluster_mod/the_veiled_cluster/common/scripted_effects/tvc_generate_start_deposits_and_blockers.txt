@@ -1,54 +1,44 @@
 tvc_home_planet_generate_start_deposits = {
 
-	add_deposit = d_eater_deposit 
+	# +20 max energy districts
+	add_deposit = d_searing_desert # district_generator_max = 2
+	add_deposit = d_geothermal_vent # district_generator_max = 3
+	add_deposit = d_geothermal_vent # district_generator_max = 3
+	add_deposit = d_underwater_vent # district_generator_max = 3
+	add_deposit = d_underwater_vent # district_generator_max = 3
+	add_deposit = d_tempestous_mountain # district_generator_max = 3
+	add_deposit = d_tempestous_mountain # district_generator_max = 3
 
-	# 5 + 3 energy
-	add_deposit = d_searing_desert
-	add_deposit = d_underwater_vent
-	add_deposit = d_tempestous_mountain
+	# +20 mining districts
+	add_deposit = d_prosperous_mesa # district_mining_max = 2
+	add_deposit = d_rich_mountain # district_mining_max = 3
+	add_deposit = d_rich_mountain # district_mining_max = 3
+	add_deposit = d_rich_mountain # district_mining_max = 3
+	add_deposit = d_submerged_ore_veins # district_mining_max = 3
+	add_deposit = d_submerged_ore_veins # district_mining_max = 3
+	add_deposit = d_submerged_ore_veins # district_mining_max = 3
 
-	# 5 + 3 mining
-	add_deposit = d_ore_rich_caverns
-	add_deposit = d_prosperous_mesa
-	add_deposit = d_submerged_ore_veins
+	# +21 farming districts
+	add_deposit = d_teeming_reef # district_farming_max = 3
+	add_deposit = d_black_soil # district_farming_max = 3
+	add_deposit = d_black_soil # district_farming_max = 3
+	add_deposit = d_marvelous_oasis # district_farming_max = 3
+	add_deposit = d_tropical_island # district_farming_max = 3
+	add_deposit = d_fungal_forest # district_farming_max = 3
+	add_deposit = d_fungal_forest # district_farming_max = 3
+		
+	# Special Resources
+	add_deposit = d_hab_zro_5 # +5 Zro
+	add_deposit = d_hab_dark_matter_10 # +10 Dark Matter
+	add_deposit = d_hab_gas_5 # +5 Exotic Gases
+	add_deposit = d_hab_nanites_3 # +3 Nanites
+	add_deposit = d_hab_crystal_5 # +5 Rare Crystals
+	add_deposit = d_hab_living_metal_1 # +1 Living Metal
+	add_deposit = d_hab_living_metal_1 # +1 Living Metal
+	add_deposit = d_hab_mote_5 # +5 Volatile Motes
+	add_deposit = d_hab_astral_threads_3 # +3 Astral Threads
 
-	# 5 + 3 farming (lithoids swap 3 for minerals)
-	add_deposit = d_lush_jungle
-	add_deposit = d_teeming_reef
-
-	if = {
-		limit = {
-			exists = owner
-			owner = {
-				is_lithoid_empire = yes
-			}
-		}
-		add_deposit = d_rich_mountain
-	}
-	else_if = {
-		limit = {
-			exists = owner
-			owner = {
-				is_lithoid_empire = no
-			}
-		}
-		add_deposit = d_black_soil
-	}
-	# In case the owner doesn't exist, as when creating Life-Seeded pre-ftls.
-	else = {
-		random_list = {
-			50 = { add_deposit = d_rich_mountain }
-			50 = { add_deposit = d_black_soil }
-		}
-	}
-
-	# 1 random medium deposit
-	random_list = {
-		33 = { add_deposit = d_frozen_gas_lake }
-		33 = { add_deposit = d_prosperous_mesa }
-		33 = { add_deposit = d_fertile_lands }
-	}
-
+	# Special Resource Buildings
 	add_deposit = d_dust_caverns
 	add_deposit = d_bubbling_swamp
 	add_deposit = d_crystalline_caverns
