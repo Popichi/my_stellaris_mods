@@ -1,7 +1,7 @@
 origin_tvc = {
 	is_origin = yes
-	icon = "gfx\interface\icons\origins\unused\origins_shroud_touched.dds"
-	picture = "gfx\event_pictures\shroudwalker_enclave.dds"
+	icon = "gfx/interface/icons/origins/origins_the_veiled_cluster.dds"
+	picture = GFX_origin_tvc
 	description = "origin_tvc_effects"
 
 	# No random weights because weight = 0 does not actually mean 0 and the AI still takes it.

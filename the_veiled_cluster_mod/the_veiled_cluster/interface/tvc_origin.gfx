@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_origin_tvc"
+		texturefile = "gfx/event_pictures/origins/shroudwalker_enclave.dds"
+		alwaystransparent = yes
+	}
+}

@@ -1,7 +1,7 @@
 @base_moon_distance = 10
 
 tvc_home_system_initializer = {
-    name = "Eternal Beacon"
+    name = "NAME_Eternal_Beacon"
     class = sc_b
 
     asteroid_belt = {
@@ -11,7 +11,7 @@ tvc_home_system_initializer = {
 
     asteroid_belt = {
         type = icy_asteroid_belt
-        radius = 315
+        radius = 325
     }
 
     flags = { tvc_home_system tvc_system empire_cluster }
@@ -21,7 +21,7 @@ tvc_home_system_initializer = {
     # System's star
     planet = {
         class = star
-		name = "Eternal Beacon"
+		name = "NAME_Eternal_Beacon"
         size = 45
         orbit_distance = 0
         orbit_angle = 1
@@ -31,15 +31,15 @@ tvc_home_system_initializer = {
 
     planet = {
         count = 4
-        class = pc_asteroid
-        name = "Bones of Giants"
+        class = "pc_asteroid"
+        name = "NAME_Bones_of_Giants"
         orbit_distance = 0
-        orbit_angle = { min = 0 max = 360 }
+        orbit_angle = { min = 90 max = 270 }
     }
 
     planet = {
-        class = pc_shrouded
-		name = "The Veil"
+        class = "pc_shrouded"
+		name = "NAME_The_Veil"
 		size = 45
 		orbit_distance = 55
         orbit_angle = { min = 0 max = 360 }
@@ -47,32 +47,32 @@ tvc_home_system_initializer = {
         change_orbit = @base_moon_distance
 
         moon = {
-            class = pc_broken
-			name = "Lost Wanderer"
+            class = "pc_broken"
+			name = "NAME_Lost_Wanderer"
 			size = 25
             orbit_distance = 5
             orbit_angle = { min = 0 max = 360 }
         }
 
         moon = {
-            class = pc_toxic
-			name = "Corrupted Wanderer"
+            class = "pc_toxic"
+			name = "NAME_Corrupted_Wanderer"
 			size = 23
             orbit_distance = 9
             orbit_angle = { min = 0 max = 360 }
         }
 
         moon = {
-            class = pc_molten
-			name = "Frenzied Wanderer"
+            class = "pc_molten"
+			name = "NAME_Frenzied_Wanderer"
 			size = 21
             orbit_distance = 9
             orbit_angle = { min = 0 max = 360 }
         }
 
         moon = {
-            class = pc_frozen
-			name = "Anguished Wanderer"
+            class = "pc_frozen"
+			name = "NAME_Anguished_Wanderer"
 			size = 19
             orbit_distance = 9
             orbit_angle = { min = 0 max = 360 }
@@ -80,8 +80,8 @@ tvc_home_system_initializer = {
     }  # Total orbit distance is 105
 
     planet = {
-        class = pc_gas_giant
-		name = "Wayward Brother"
+        class = "pc_gas_giant"
+		name = "NAME_Wayward_Brother"
 		size = 40
 		orbit_distance = 85
         orbit_angle = { min = 0 max = 360 }
@@ -90,16 +90,16 @@ tvc_home_system_initializer = {
         change_orbit = @base_moon_distance
 
         moon = {
-            class = pc_barren
-			name = "Twin Sisters (Amber)"
+            class = "pc_barren"
+			name = "NAME_Amber_of_the_Twin_Sisters"
 			size = 17
             orbit_distance = 15
             orbit_angle = { min = 0 max = 360 }
         }
 
         moon = {
-            class = pc_barren_cold
-			name = "Twin Sisters (Silver)"
+            class = "pc_barren_cold"
+			name = "NAME_Silver_of_the_Twin_Sisters"
 			size = 15
             orbit_distance = 5
             orbit_angle = { min = 0 max = 360 }
@@ -108,12 +108,13 @@ tvc_home_system_initializer = {
 
     # Habitable planets
     planet = {
-        class = pc_gaia
-		name = "Veiled Garden"
+        class = "pc_gaia"
+		name = "NAME_Veiled_Garden"
 		size = 35
 		orbit_distance = 80
         orbit_angle = { min = 0 max = 360 }
         home_planet = yes
+        has_ring = no
         flags = { tvc_home_planet }
         init_effect = {
             save_global_event_target_as = tvc_home_planet
@@ -122,38 +123,38 @@ tvc_home_system_initializer = {
         change_orbit = @base_moon_distance
 
         moon = {
-            class = pc_gaia
-			name = "Duskveil"
+            class = "pc_gaia"
+			name = "NAME_Duskveil"
 			size = 25
             orbit_distance = 5
             orbit_angle = { min = 0 max = 360 }
         }
 
 		moon = {
-            class = pc_gaia
-			name = "Moonshroud"
+            class = "pc_gaia"
+			name = "NAME_Moonshroud"
 			size = 23
             orbit_distance = 10
             orbit_angle = { min = 0 max = 360 }
         }
 		
 		moon = {
-            class = pc_gaia
-			name = "Gloompeak"
+            class = "pc_gaia"
+			name = "NAME_Gloompeak"
 			size = 21
             orbit_distance = 10
             orbit_angle = { min = 0 max = 360 }
         }
     } # Total orbit distance is 270
 
-    change_orbit = 45 # Total orbit distance is 315
+    change_orbit = 55 # Total orbit distance is 315
 
     planet = {
         count = 8
-        class = pc_ice_asteroid
-        name = "Bones of Ice Giants"
+        class = "pc_ice_asteroid"
+        name = "NAME_Bones_of_Ice_Giants"
         orbit_distance = 0
-        orbit_angle = { min = 0 max = 360 }
+        orbit_angle = { min = 90 max = 270 }
     }
 }
 
