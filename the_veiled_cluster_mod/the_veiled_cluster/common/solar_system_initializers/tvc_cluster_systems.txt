@@ -128,6 +128,15 @@ tvc_home_system_initializer = {
 			size = 25
             orbit_distance = 5
             orbit_angle = { min = 0 max = 360 }
+            deposit_blockers = none
+		    modifiers = none
+            # flags = { ignore_startup_effect }
+            # init_effect = {
+            #     remove_deposit = yes
+            #     clear_planet_modifiers = yes
+            #     clear_blockers = yes
+            #     tvc_generator_planet_generate_start_deposits = yes
+            # }
         }
 
 		moon = {
