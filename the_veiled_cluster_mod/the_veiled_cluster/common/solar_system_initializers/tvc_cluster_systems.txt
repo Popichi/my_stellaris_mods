@@ -16,7 +16,7 @@ tvc_home_system_initializer = {
 
     flags = { tvc_home_system tvc_system empire_cluster }
 
-    usage = custom_empire
+    usage = origin 
 
     # System's star
     planet = {
@@ -121,6 +121,8 @@ tvc_home_system_initializer = {
 		}
 
         change_orbit = @base_moon_distance
+        # deposit_blockers = none
+		    # modifiers = none
 
         moon = {
             class = "pc_gaia"
@@ -128,15 +130,13 @@ tvc_home_system_initializer = {
 			size = 25
             orbit_distance = 5
             orbit_angle = { min = 0 max = 360 }
-            deposit_blockers = none
-		    modifiers = none
-            # flags = { ignore_startup_effect }
-            # init_effect = {
-            #     remove_deposit = yes
-            #     clear_planet_modifiers = yes
-            #     clear_blockers = yes
-            #     tvc_generator_planet_generate_start_deposits = yes
-            # }
+            flags = { ignore_startup_effect tvc_generator_planet }
+            init_effect = {
+                clear_deposits = yes
+                clear_planet_modifiers = yes
+                clear_blockers = yes
+                tvc_generator_planet_generate_start_deposits = yes
+            }
         }
 
 		moon = {
@@ -145,6 +145,13 @@ tvc_home_system_initializer = {
 			size = 23
             orbit_distance = 10
             orbit_angle = { min = 0 max = 360 }
+            flags = { ignore_startup_effect tvc_mining_planet }
+            init_effect = {
+                clear_deposits = yes
+                clear_planet_modifiers = yes
+                clear_blockers = yes
+                tvc_mining_planet_generate_start_deposits = yes
+            }
         }
 		
 		moon = {
@@ -153,6 +160,13 @@ tvc_home_system_initializer = {
 			size = 21
             orbit_distance = 10
             orbit_angle = { min = 0 max = 360 }
+            flags = { ignore_startup_effect tvc_farming_planet }
+            init_effect = {
+                clear_deposits = yes
+                clear_planet_modifiers = yes
+                clear_blockers = yes
+                tvc_farming_planet_generate_start_deposits = yes
+            }
         }
     } # Total orbit distance is 270
 

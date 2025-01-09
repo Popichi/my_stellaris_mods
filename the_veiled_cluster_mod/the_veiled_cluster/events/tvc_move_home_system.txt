@@ -189,6 +189,6 @@ country_event = {
             set_species_homeworld = event_target:tvc_home_planet
         }
 
-		#country_event = { id = tvc.2 }
+		#country_event = { id = tvc.4 }
 	}
 }

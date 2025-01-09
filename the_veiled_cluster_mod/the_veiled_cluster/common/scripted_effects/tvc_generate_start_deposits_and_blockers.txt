@@ -1,5 +1,15 @@
 tvc_home_planet_generate_start_deposits = {
 
+	add_modifier = {
+		modifier = magnetic_research_boost # + 20% Research
+		days = -1
+	}
+
+	add_modifier = {
+		modifier = natural_beauty
+		days = -1
+	}
+
 	# +20 max energy districts
 	add_deposit = d_searing_desert # district_generator_max = 2
 	add_deposit = d_geothermal_vent # district_generator_max = 3
@@ -46,6 +56,19 @@ tvc_home_planet_generate_start_deposits = {
 
 tvc_generator_planet_generate_start_deposits = {
 
+	add_modifier = {
+		modifier = abundant_geothermal_activity # district_generator_max = 4
+		days = -1
+	}
+
+	add_modifier = {
+		modifier = natural_beauty
+		days = -1
+	}
+
+	add_deposit = d_betharian_deposit
+	add_deposit = d_betharian_deposit
+
 	# +20 max energy districts
 	add_deposit = d_searing_desert # district_generator_max = 2
 	add_deposit = d_geothermal_vent # district_generator_max = 3
@@ -79,7 +102,215 @@ tvc_generator_planet_generate_start_deposits = {
 		25 = { add_deposit = d_hab_zro_2 } # +2 Zro
 		12 = { add_deposit = d_hab_zro_3 } # +3 Zro
 		7 = { add_deposit = d_hab_zro_4 } # +4 Zro
-		3 = { add_deposit = d_hab_zro_4 } # +5 Zro
+		3 = { add_deposit = d_hab_zro_5 } # +5 Zro
+	}
+
+	# Add one random Dark Matter deposit
+	# QUESTION: What's the difference between "d_dark_matter_deposit_X" and "d_hab_dark_matter"?
+		# TO DO: Check if there are similar two different definitions for each special resource
+		# deposit!
+	random_list = {
+		50 = { add_deposit = d_hab_dark_matter_1 } # +1 Dark Matter
+		25 = { add_deposit = d_hab_dark_matter_2 } # +2 Dark Matter
+		12 = { add_deposit = d_hab_dark_matter_3 } # +3 Dark Matter
+		7 = { add_deposit = d_hab_dark_matter_10 } # +10 Dark Matter
+	}
+
+	# Add one random Nanite or Living Metal deposit
+	random_list = {
+		50 = { add_deposit = d_hab_nanites_3 } # # +3 Nanites
+		50 = { add_deposit = d_hab_living_metal_1 } # +1 Living Metal
+	}
+	
+	# QUESTION: Is there a way to add a deposit by chance instead of selecting a random one 
+	# from a list? Does ChatGPT's approach below work?
+		# TO DO: Test ChatGPT's solution!
+	# If lucky, add Astral Threads!
+	random_list = {
+		30 = { add_deposit = d_hab_astral_threads_3 }  # 30% chance
+		70 = { }                                       # 70% do nothing
+	}	
+
+	# Add one random special resource deposit
+	random_list = {
+		33 = { add_deposit = d_hab_gas_5 } # +5 Exotic Gases
+		33 = { add_deposit = d_hab_crystal_5 } # +5 Rare Crystals
+		33 = { add_deposit = d_hab_mote_5 } # +5 Volatile Motes
+	}
+}
+
+tvc_mining_planet_generate_start_deposits = {
+
+	add_modifier = {
+		modifier = ultra_rich # district_generator_max +8 and +25% minerals from jobs
+		days = -1
+	}
+
+	add_modifier = {
+		modifier = natural_beauty
+		days = -1
+	}
+
+	random_list = {
+		3 = { add_modifier = {
+			modifier = subterranean_wildlife
+			days = -1
+			}
+		} # +4 max mining districts, +2 max districts, +1 society from miners, +20% building and district upkeep
+
+		3 = { add_modifier = {
+			modifier = asteroid_belt
+			days = -1
+			}
+		} # +4 max mining districts, +1 engineering from miners
+
+		1 = { add_modifier = {
+			modifier = obsidian_lakes
+			days = -1
+			}
+		} # +2 max mining districts, +0.2 rare crystals from miners, -10% housing
+	}
+
+	# +14 max energy districts
+	add_deposit = d_searing_desert # district_generator_max = 2
+	add_deposit = d_geothermal_vent # district_generator_max = 3
+	add_deposit = d_geothermal_vent # district_generator_max = 3
+	add_deposit = d_underwater_vent # district_generator_max = 3
+	add_deposit = d_tempestous_mountain # district_generator_max = 3
+
+	# +14 mining districts
+	add_deposit = d_prosperous_mesa # district_mining_max = 2
+	add_deposit = d_rich_mountain # district_mining_max = 3
+	add_deposit = d_rich_mountain # district_mining_max = 3
+	add_deposit = d_submerged_ore_veins # district_mining_max = 3
+	add_deposit = d_submerged_ore_veins # district_mining_max = 3
+
+	# +15 farming districts
+	add_deposit = d_teeming_reef # district_farming_max = 3
+	add_deposit = d_black_soil # district_farming_max = 3
+	add_deposit = d_marvelous_oasis # district_farming_max = 3
+	add_deposit = d_tropical_island # district_farming_max = 3
+	add_deposit = d_fungal_forest # district_farming_max = 3
+		
+	# Special Resources
+	# QUESTION: Can you use numbers like 7.5 in random lists?
+	
+	# Add one random Zro deposit
+	# "random_list" picks one random set of effects from a list, influenced by the relative weight
+	random_list = {
+		50 = { add_deposit = d_hab_zro_1 } # +1 Zro
+		25 = { add_deposit = d_hab_zro_2 } # +2 Zro
+		12 = { add_deposit = d_hab_zro_3 } # +3 Zro
+		7 = { add_deposit = d_hab_zro_4 } # +4 Zro
+		3 = { add_deposit = d_hab_zro_5 } # +5 Zro
+	}
+
+	# Add one random Dark Matter deposit
+	# QUESTION: What's the difference between "d_dark_matter_deposit_X" and "d_hab_dark_matter"?
+		# TO DO: Check if there are similar two different definitions for each special resource
+		# deposit!
+	random_list = {
+		50 = { add_deposit = d_hab_dark_matter_1 } # +1 Dark Matter
+		25 = { add_deposit = d_hab_dark_matter_2 } # +2 Dark Matter
+		12 = { add_deposit = d_hab_dark_matter_3 } # +3 Dark Matter
+		7 = { add_deposit = d_hab_dark_matter_10 } # +10 Dark Matter
+	}
+
+	# Add one random Nanite or Living Metal deposit
+	random_list = {
+		50 = { add_deposit = d_hab_nanites_3 } # # +3 Nanites
+		50 = { add_deposit = d_hab_living_metal_1 } # +1 Living Metal
+	}
+	
+	# QUESTION: Is there a way to add a deposit by chance instead of selecting a random one 
+	# from a list? Does ChatGPT's approach below work?
+		# TO DO: Test ChatGPT's solution!
+	# If lucky, add Astral Threads!
+	random_list = {
+		30 = { add_deposit = d_hab_astral_threads_3 }  # 30% chance
+		70 = { }                                       # 70% do nothing
+	}	
+
+	# Add one random special resource deposit
+	random_list = {
+		33 = { add_deposit = d_hab_gas_5 } # +5 Exotic Gases
+		33 = { add_deposit = d_hab_crystal_5 } # +5 Rare Crystals
+		33 = { add_deposit = d_hab_mote_5 } # +5 Volatile Motes
+	}
+}
+
+tvc_farming_planet_generate_start_deposits = {
+
+	add_modifier = {
+		modifier = hyper_ecosystem # -30% minerals from jobs, -50% planetary build speed, +2 food from farmers, pops have no food upkeep
+		days = -1
+	}
+
+
+	add_modifier = {
+		modifier = natural_beauty
+		days = -1
+	}
+
+	random_list = {
+		3 = { add_modifier = {
+			modifier = lush_planet
+			days = -1
+			}
+		} # +4 max agriculture districts, +20% food from jobs, +10% habitability
+
+		3 = { add_modifier = {
+			modifier = rich_mircoflora
+			days = -1
+			}
+		} # +4 max agriculture districts, +1 society from farmers
+
+		1 = { add_modifier = {
+			modifier = cunning_flora
+			days = -1
+			}
+		} # +1 society from farmers
+
+		# 1 = { add_modifier = {
+		# 	modifier = food_rich_planet
+		# 	days = -1
+		# 	}
+		# } # +1 society from farmers TO DO: Check the modifier!
+	}
+
+	# +14 max energy districts
+	add_deposit = d_searing_desert # district_generator_max = 2
+	add_deposit = d_geothermal_vent # district_generator_max = 3
+	add_deposit = d_geothermal_vent # district_generator_max = 3
+	add_deposit = d_underwater_vent # district_generator_max = 3
+	add_deposit = d_tempestous_mountain # district_generator_max = 3
+
+	# +14 mining districts
+	add_deposit = d_prosperous_mesa # district_mining_max = 2
+	add_deposit = d_rich_mountain # district_mining_max = 3
+	add_deposit = d_rich_mountain # district_mining_max = 3
+	add_deposit = d_submerged_ore_veins # district_mining_max = 3
+	add_deposit = d_submerged_ore_veins # district_mining_max = 3
+
+	# +18 farming districts
+	add_deposit = d_teeming_reef # district_farming_max = 3
+	add_deposit = d_black_soil # district_farming_max = 3
+	add_deposit = d_black_soil # district_farming_max = 3
+	add_deposit = d_marvelous_oasis # district_farming_max = 3
+	add_deposit = d_tropical_island # district_farming_max = 3
+	add_deposit = d_fungal_forest # district_farming_max = 3
+		
+	# Special Resources
+	# QUESTION: Can you use numbers like 7.5 in random lists?
+	
+	# Add one random Zro deposit
+	# "random_list" picks one random set of effects from a list, influenced by the relative weight
+	random_list = {
+		50 = { add_deposit = d_hab_zro_1 } # +1 Zro
+		25 = { add_deposit = d_hab_zro_2 } # +2 Zro
+		12 = { add_deposit = d_hab_zro_3 } # +3 Zro
+		7 = { add_deposit = d_hab_zro_4 } # +4 Zro
+		3 = { add_deposit = d_hab_zro_5 } # +5 Zro
 	}
 
 	# Add one random Dark Matter deposit
