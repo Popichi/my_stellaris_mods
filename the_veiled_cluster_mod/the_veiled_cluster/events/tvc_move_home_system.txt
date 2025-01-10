@@ -97,7 +97,7 @@ country_event = {
 		}
 
 		event_target:tvc_home_system = {
-			generate_home_system_resources = yes
+			#generate_home_system_resources = yes
 			every_system_planet = {
 				limit = {
 					has_planet_flag = starting_mining_target

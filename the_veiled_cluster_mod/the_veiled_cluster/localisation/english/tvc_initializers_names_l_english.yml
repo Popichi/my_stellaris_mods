@@ -18,3 +18,16 @@
   NAME_Moonshroud:0 "Moonshroud"
   NAME_Gloompeak:0 "Gloompeak"
   NAME_Bones_of_Ice_Giants:0 "Bones of Ice Giants"
+
+# The Veiled Cluster Artodath System
+  NAME_Artodath:0 "Artodath"
+  NAME_Fires_of_Hope:0 "Fires of Hope"
+  NAME_Torchbearer:0 "Torchbearer"
+  NAME_Eye_of_the_Storm:0 "Eye of the Storm"
+  NAME_Valley_of_Light:0 "Valley of Light"
+  NAME_Estel:0 "Estel" # From https://eldamo.org, meaning Hope
+  NAME_Fool's_Paradise:0 "Fool's Paradise"
+  NAME_Harthad:0 "Harthad" # From https://eldamo.org, meaning Hope
+  NAME_Liquid_Hope:0 "Liquid Hope"
+  NAME_Light's_End:0 "Light's End"
+  NAME_Hodhir:0 "Hodhir" # From https://eldamo.org, meaning Hope

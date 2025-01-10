@@ -25,6 +25,13 @@ tvc_home_system_initializer = {
         size = 45
         orbit_distance = 0
         orbit_angle = 1
+        init_effect = {
+            prevent_anomaly = yes
+		    clear_deposits = yes
+            set_planet_flag = starting_mining_target
+		    set_planet_flag = starting_deposit
+            add_deposit = d_energy_30
+        }
     }
 
     change_orbit = 50 # Total orbit distance is 50
@@ -35,6 +42,13 @@ tvc_home_system_initializer = {
         name = "NAME_Bones_of_Giants"
         orbit_distance = 0
         orbit_angle = { min = 90 max = 270 }
+        init_effect = {
+            prevent_anomaly = yes
+		    clear_deposits = yes
+            set_planet_flag = starting_mining_target
+		    set_planet_flag = starting_deposit
+            add_deposit = d_minerals_2
+        }
     }
 
     planet = {
@@ -46,12 +60,26 @@ tvc_home_system_initializer = {
 
         change_orbit = @base_moon_distance
 
+        init_effect = {
+            prevent_anomaly = yes
+		    clear_deposits = yes
+            add_deposit = d_zro_deposit_5
+        }
+
         moon = {
             class = "pc_broken"
 			name = "NAME_Lost_Wanderer"
 			size = 25
             orbit_distance = 5
             orbit_angle = { min = 0 max = 360 }
+            init_effect = {
+                prevent_anomaly = yes
+                clear_deposits = yes
+                set_planet_flag = starting_mining_target
+                set_planet_flag = starting_deposit
+                add_deposit = d_minerals_3
+                add_deposit = d_alloys_25
+            }
         }
 
         moon = {
@@ -60,6 +88,13 @@ tvc_home_system_initializer = {
 			size = 23
             orbit_distance = 9
             orbit_angle = { min = 0 max = 360 }
+            init_effect = {
+                prevent_anomaly = yes
+                clear_deposits = yes
+                set_planet_flag = starting_deposit
+                add_deposit = d_minerals_3
+                add_deposit = d_exotic_gases_1
+            }
         }
 
         moon = {
@@ -68,6 +103,13 @@ tvc_home_system_initializer = {
 			size = 21
             orbit_distance = 9
             orbit_angle = { min = 0 max = 360 }
+            init_effect = {
+                prevent_anomaly = yes
+                clear_deposits = yes
+                set_planet_flag = starting_deposit
+                add_deposit = d_energy_3
+                add_deposit = d_volatile_motes_1
+            }
         }
 
         moon = {
@@ -76,6 +118,12 @@ tvc_home_system_initializer = {
 			size = 19
             orbit_distance = 9
             orbit_angle = { min = 0 max = 360 }
+            init_effect = {
+                prevent_anomaly = yes
+                clear_deposits = yes
+                set_planet_flag = starting_deposit
+                add_deposit = d_rare_crystals_1
+            }
         }
     }  # Total orbit distance is 105
 
@@ -89,12 +137,31 @@ tvc_home_system_initializer = {
 
         change_orbit = @base_moon_distance
 
+        init_effect = {
+            prevent_anomaly = yes
+            clear_deposits = yes
+            set_planet_flag = starting_research_target
+            set_planet_flag = starting_deposit
+            add_deposit = d_physics_5
+            add_deposit = d_society_5
+            add_deposit = d_engineering_5
+        }
+
         moon = {
             class = "pc_barren"
 			name = "NAME_Amber_of_the_Twin_Sisters"
 			size = 17
             orbit_distance = 15
             orbit_angle = { min = 0 max = 360 }
+            init_effect = {
+                prevent_anomaly = yes
+                clear_deposits = yes
+                set_planet_flag = starting_research_target
+                set_planet_flag = starting_deposit
+                add_deposit = d_physics_1
+                add_deposit = d_society_1
+                add_deposit = d_engineering_1
+            }
         }
 
         moon = {
@@ -103,6 +170,15 @@ tvc_home_system_initializer = {
 			size = 15
             orbit_distance = 5
             orbit_angle = { min = 0 max = 360 }
+            init_effect = {
+                prevent_anomaly = yes
+                clear_deposits = yes
+                set_planet_flag = starting_research_target
+                set_planet_flag = starting_deposit
+                add_deposit = d_physics_1
+                add_deposit = d_society_1
+                add_deposit = d_engineering_1
+            }
         }
     } # Total orbit distance is 190
 
@@ -121,8 +197,6 @@ tvc_home_system_initializer = {
 		}
 
         change_orbit = @base_moon_distance
-        # deposit_blockers = none
-		    # modifiers = none
 
         moon = {
             class = "pc_gaia"
@@ -178,11 +252,38 @@ tvc_home_system_initializer = {
         name = "NAME_Bones_of_Ice_Giants"
         orbit_distance = 0
         orbit_angle = { min = 90 max = 270 }
+        init_effect = {
+            prevent_anomaly = yes
+            clear_deposits = yes
+            set_planet_flag = starting_mining_target
+            set_planet_flag = starting_deposit
+            add_deposit = d_energy_1
+        }
     }
+
+    init_effect = {
+		spawn_planet = {
+			class = "pc_astral_scar"
+            # TO DO: Learn what "spawn_beyond_gravity_well" does and how it works!
+			spawn_beyond_gravity_well = yes
+            # TO DO: Learn what "orbit_angle_offset" does and how it works!
+			orbit_angle_offset = 360
+			size = 20
+			init_effect = {
+				set_name = "NAME_Astral_Scar"
+                # "ASTRAL_SCAR_CAT" is defined in 
+                # "Stellaris\common\anomalies\101_anomaly_categories_astral_planes.txt". It's 
+                # listed as the "Base Astral Scar Anomaly".
+				add_anomaly = { category = ASTRAL_SCAR_CAT }
+                set_planet_flag = ignore_startup_effect
+			}
+		}
+	}
 }
 
+# Artodath is the aspect of hope
 tvc_system_2 = {
-    name = "Artodath"
+    name = "NAME_Artodath"
     class = sc_f
 
     asteroid_belt = {
@@ -195,7 +296,7 @@ tvc_system_2 = {
     # System's star
     planet = {
         class = star
-		name = "Artodath"
+		name = "NAME_Artodath"
         size = 27
         orbit_distance = 0
         orbit_angle = 1
@@ -203,14 +304,14 @@ tvc_system_2 = {
 
     planet = {
         class = "pc_molten"
-        name = "Thilios"
+        name = "NAME_Fires_of_Hope"
         size = 24
         orbit_distance = 40
         orbit_angle = { min = 0 max = 360 }
 
         moon = {
-            class = pc_barren
-			name = "Mellon"
+            class = "pc_barren"
+			name = "NAME_Torchbearer"
 			size = 14
             orbit_distance = @base_moon_distance
             orbit_angle = { min = 0 max = 360 }
@@ -219,23 +320,23 @@ tvc_system_2 = {
 
     planet = {
         class = "pc_gas_giant"
-        name = "Megalos"
+        name = "NAME_Eye_of_the_Storm"
         size = 27
         orbit_distance = 55
         orbit_angle = { min = 0 max = 360 }
         has_ring = no
 
         moon = {
-            class = pc_gaia
-			name = "Valley of Blossoms"
+            class = "pc_gaia"
+			name = "NAME_Valley_of_Light"
 			size = 25
             orbit_distance = 20
             orbit_angle = { min = 0 max = 360 }
         }
 
         moon = {
-            class = pc_barren
-			name = "Oudin"
+            class = "pc_barren"
+			name = "NAME_Estel"
 			size = 14
             orbit_distance = @base_moon_distance
             orbit_angle = { min = 0 max = 360 }
@@ -244,14 +345,21 @@ tvc_system_2 = {
 
     planet = {
         class = "pc_barren"
-        name = "Falon"
+        name = "NAME_Fool's_Paradise"
         size = 25
         orbit_distance = 55
         orbit_angle = { min = 0 max = 360 }
 
+        init_effect = {
+            add_modifier = {
+                modifier = terraforming_candidate
+                days = -1
+            }
+        }
+
         moon = {
             class = "pc_molten"
-			name = "Neaden"
+			name = "NAME_Harthad"
 			size = 11
             orbit_distance = @base_moon_distance
             orbit_angle = { min = 0 max = 360 }
@@ -263,21 +371,21 @@ tvc_system_2 = {
     planet = {
         count = 5
         class = "pc_ice_asteroid"
-        name = "Diamond Walls"
+        name = "NAME_Liquid_Hope"
         orbit_distance = 0
         orbit_angle = { min = 0 max = 360 }
     }
 
     planet = {
         class = "pc_barren_cold"
-        name = "Utul"
+        name = "NAME_Light's_End"
         size = 23
         orbit_distance = 40
         orbit_angle = { min = 0 max = 360 }
 
         moon = {
             class = "pc_barren_cold"
-			name = "Ridan"
+			name = "NAME_Hodhir"
 			size = 12
             orbit_distance = @base_moon_distance
             orbit_angle = { min = 0 max = 360 }
