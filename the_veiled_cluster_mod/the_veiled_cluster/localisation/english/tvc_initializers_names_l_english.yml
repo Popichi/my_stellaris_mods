@@ -103,4 +103,48 @@
   NAME_Scarecrow:0 "Scarecrow"
   NAME_Plentia:0 "Plentia"
   NAME_Goldenfield:0 "Goldenfield"
-  NAME_Yavie:0 "Yavie" # From https://eldamo.org, autumn, harvest [time or act]
+  NAME_Yavie:0 "Yavie" # From https://eldamo.org, meaning autumn, harvest [time or act]
+
+# The Veiled Cluster Targonath System
+  NAME_Targonath:0 "Targonath"
+  NAME_Fiery_Urge:0 "Fiery Urge"
+  NAME_Andreth:0 "Andreth" # From https://eldamo.org, meaning patience
+  NAME_Steadyheart:0 "Steadyheart"
+  NAME_Pillars_of_Time:0 "Pillars of Time"
+  NAME_Omgulin:0 "Omgulin" # From https://eldamo.org, meaning patient
+  NAME_Perseverance:0 "Perseverance"
+  NAME_Perendie:0 "Perendie" # From https://eldamo.org, meaning patience; endurance; an agelong period
+  NAME_Shards_of_the_Timeless:0 "Shards of the Timeless"
+
+# The Veiled Cluster Fodoleth System
+  NAME_Fodoleth:0 "Fodoleth"
+  NAME_Softglow:0 "Softglow"
+  NAME_Linda:0 "Linda" # From https://eldamo.org, meaning gentle, kind; soft
+  NAME_Caretaker:0 "Caretaker"
+  NAME_Milui:0 "Milui" # From https://eldamo.org, meaning friendly, loving, kind
+  NAME_Gentlewaves:0 "Gentlewaves"
+  NAME_Amalda:0 "Amalda" # From https://eldamo.org, meaning tender, soft, kind, gentle
+  NAME_Mirrors_of_Reflection:0 "Mirrors of Reflection"
+  NAME_Gentleveil:0 "Gentleveil"
+  NAME_Nostale:0 "Nostale" # From https://eldamo.org, meaning n. species, kind; nature
+  NAME_Mellow_Rays:0 "Mellow Rays"
+  NAME_Blethrin:0 "Blethrin" # From https://eldamo.org, meaning gracious, kind
+  NAME_Warm_Embrace:0 "Warm Embrace"
+  NAME_Miquelis:0 "Miquelis" # From https://eldamo.org, meaning (soft, sweet) kiss
+  NAME_Burning_Love:0 "Burning Love"
+  NAME_Milya:0 "Milya" # From https://eldamo.org, meaning soft, gentle, weak
+  NAME_Gentle_Breeze:0 "Gentle Breeze"
+  NAME_Lini:0 "Lini" # From https://eldamo.org, meaning gentle
+  NAME_Harmony's_Reach:0 "Harmony's Reach"
+  NAME_Lusina:0 "Lusina" # From https://eldamo.org, meaning warm, glowing (of things); affectionate, hearty (of people)
+  NAME_Tenderheart:0 "Tenderheart"
+  NAME_Maswa:0 "Maswa" # From https://eldamo.org, meaning soft, cooked, ripe
+
+# The Veiled Cluster Baodreth System
+  NAME_Desert_of_the_Real:0 "Desert of the Real"
+  NAME_A_Place_that_Could_Be:0 "A Place that Could Be"
+  NAME_A_Place_that_Once_Was:0 "A Place that Once Was"
+  NAME_Unending_Change:0 "Unending Change"
+  NAME_Ring_of_Destruction:0 "Ring of Destruction"
+  NAME_Quiet_Cyclone:0 "Quiet Cyclone"
+  NAME_Haugrin:0 "Haugrin" # From https://eldamo.org, meaning lowly, humble, mean

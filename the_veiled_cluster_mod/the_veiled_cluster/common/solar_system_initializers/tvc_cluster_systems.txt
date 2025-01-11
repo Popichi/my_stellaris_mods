@@ -1111,23 +1111,24 @@ tvc_system_8 = {
 	} # Total orbit distance is 270
 }
 
+# Targonath is the aspect of generosity.
 tvc_system_9 = {
-    name = "Targonath"
+    name = "NAME_Targonath"
     class = "sc_binary_3"
     flags = { tvc_system_9 tvc_system empire_cluster }
 
     asteroid_belt = {
 		type = icy_asteroid_belt
-		radius = 165
+		radius = 175
 	}
 
     # System's star
     planet = {
 		count = 1
 		class = star
-        name = "Targonath"
-		orbit_distance = 25
-		orbit_angle = 1
+        name = "NAME_Targonath"
+		orbit_distance = 15
+        orbit_angle = { min = 90 max = 270 }
 		size = { min = 20 max = 30 }
 		has_ring = no
         flags = { main_star }
@@ -1136,31 +1137,34 @@ tvc_system_9 = {
 	 planet = {
 		count = 1
 		class = star
-        name = "Ralonath"
-		orbit_distance = 0
+        name = "NAME_Targonath"
+        orbit_distance = 10
+        orbit_angle = 180
 		size = { min = 15 max = 25 }
 		has_ring = no
 	}
 
     planet = {
         class = "pc_molten"
-        name = "Desras"
+        name = "NAME_Fiery_Urge"
         size = 23
         orbit_distance = 40
         orbit_angle = { min = 0 max = 360 }
 
         moon = {
 			class = "pc_molten"
-            name = "Orel"
+            name = "NAME_Andreth"
 			size = 13
 			orbit_angle = { min = 0 max = 360 }
 			orbit_distance = @base_moon_distance
 		}
     } # Total orbit distance is 65
 
+    # This habitable planet is not within the habitable zone but this is a heavily shroud
+    # influenced system so lore wise, it is ok.
     planet = {
         class = "pc_gas_giant"
-        name = "Sardes"
+        name = "NAME_Steadyheart"
         size = 25
         orbit_distance = 45
         orbit_angle = { min = 0 max = 360 }
@@ -1168,7 +1172,7 @@ tvc_system_9 = {
 
         moon = {
 			class = "pc_alpine"
-            name = "Pillars of Heaven"
+            name = "NAME_Pillars_of_Time"
 			size = 23
 			orbit_angle = { min = 0 max = 360 }
 			orbit_distance = 15
@@ -1176,43 +1180,46 @@ tvc_system_9 = {
 
         moon = {
 			class = "pc_barren"
-            name = "Moedon"
+            name = "NAME_Omgulin"
 			size = 15
 			orbit_angle = { min = 0 max = 360 }
 			orbit_distance = @base_moon_distance
 		}
     } # Total orbit distance is 110
 
+    # This habitable planet is not within the habitable zone but this is a heavily shroud
+    # influenced system so lore wise, it is ok.
     planet = {
         class = "pc_arctic"
-        name = ""
+        name = "NAME_Perseverance"
         size = 21
-        orbit_distance = 40
+        orbit_distance = 45
         orbit_angle = { min = 0 max = 360 }
         has_ring = yes
 
         moon = {
 			class = "pc_barren_cold"
-            name = "Tadadon"
+            name = "NAME_Perendie"
 			size = 10
 			orbit_angle = { min = 0 max = 360 }
-			orbit_distance = @base_moon_distance
+			orbit_distance = 12
 		}
-    } # Total orbit distance is 150
+    } # Total orbit distance is 155
 
-    change_orbit = 15 # Total orbit distance is 165
+    change_orbit = 20 # Total orbit distance is 175
 
     planet = {
 		count = 5
-        name = "Breath of Targonath"
+        name = "NAME_Shards_of_the_Timeless"
 		class = "pc_ice_asteroid"
 		orbit_distance = 0
-		orbit_angle = { min = 0 max = 360 }
+		orbit_angle = { min = 90 max = 270 }
 	}
 }
 
+# Fodoleth is the aspect of Kindness.
 tvc_system_10 = {
-    name = "Fodoleth"
+    name = "NAME_Fodoleth"
     class = "sc_trinary_2"
 
     flags = { tvc_system_10 tvc_system empire_cluster }
@@ -1224,7 +1231,7 @@ tvc_system_10 = {
 
     planet = {
         class = star
-        name = "Fodoleth"
+        name = "NAME_Fodoleth"
         size = { min = 30 max = 35 }
         orbit_distance = 0
         orbit_angle = 1
@@ -1233,14 +1240,16 @@ tvc_system_10 = {
 
         planet = {
             class = "pc_molten"
-            size = 23
+            name = "NAME_Softglow"
+            size = 22
             orbit_distance = 35
             orbit_angle = { min = 0 max = 360 }
             satellite_naming_policy = lower_case_latin_letters
 
             moon = {
                 class = "pc_toxic"
-                size = 12
+                name = "NAME_Linda"
+                size = 11
                 orbit_angle = { min = 0 max = 360 }
                 orbit_distance = @base_moon_distance
             }
@@ -1248,6 +1257,7 @@ tvc_system_10 = {
 
         planet = {
             class = "pc_gas_giant"
+            name = "NAME_Caretaker"
             size = 21
             orbit_distance = 30
             orbit_angle = { min = 0 max = 360 }
@@ -1256,15 +1266,17 @@ tvc_system_10 = {
 
             moon = {
                 class = "pc_barren"
+                name = "NAME_Milui"
                 size = 11
                 orbit_angle = { min = 0 max = 360 }
                 orbit_distance = 15
             }
         } # Total star specific orbit distance is 65
 
+        # This habitable planet is within the habitable zone.
         planet = {
             class = "pc_gaia"
-            name = "Dawnbreaker"
+            name = "NAME_Gentlewaves"
             size = 25
             orbit_distance = 35
             orbit_angle = { min = 0 max = 360 }
@@ -1273,6 +1285,7 @@ tvc_system_10 = {
 
             moon = {
                 class = "pc_barren_cold"
+                name = "NAME_Amalda"
                 size = 9
                 orbit_angle = { min = 0 max = 360 }
                 orbit_distance = @base_moon_distance
@@ -1284,10 +1297,10 @@ tvc_system_10 = {
 
     planet = {
         count = 5
-        name = "Tears of Joy"
+        name = "NAME_Mirrors_of_Reflection"
         class = "pc_ice_asteroid"
         orbit_distance = 0
-        orbit_angle = { min = 0 max = 360 }
+        orbit_angle = { min = 90 max = 270 }
     }
 
     change_orbit = -115 # Total orbit distance is 0
@@ -1295,6 +1308,7 @@ tvc_system_10 = {
     # Second star
     planet = {
         class = star
+        name = "NAME_Fodoleth"
         size = { min = 25 max = 30 }
         orbit_distance = 240
         orbit_angle = { min = 20 max = 140 }
@@ -1302,6 +1316,7 @@ tvc_system_10 = {
 
         planet = {
             class = "pc_shrouded"
+            name = "NAME_Gentleveil"
             size = 21
             orbit_distance = 35
             orbit_angle = { min = 0 max = 360 }
@@ -1309,6 +1324,7 @@ tvc_system_10 = {
 
             moon = {
                 class = "pc_molten"
+                name = "NAME_Nostale"
                 size = 10
                 orbit_angle = { min = 0 max = 360 }
                 orbit_distance = @base_moon_distance
@@ -1317,6 +1333,7 @@ tvc_system_10 = {
 
         planet = {
             class = "pc_barren"
+            name = "NAME_Mellow_Rays"
             size = 17
             orbit_distance = 35
             orbit_angle = { min = 0 max = 360 }
@@ -1324,6 +1341,7 @@ tvc_system_10 = {
 
             moon = {
                 class = "pc_toxic"
+                name = "NAME_Blethrin"
                 size = 8
                 orbit_angle = { min = 0 max = 360 }
                 orbit_distance = @base_moon_distance
@@ -1331,16 +1349,18 @@ tvc_system_10 = {
         } # Total star specific orbit distance is 70
 
 
+        # This habitable planet is within the habitable zone.
         planet = {
             class = "pc_gaia"
             size = 21
-            name = "Light of the West"
+            name = "NAME_Warm_Embrace"
             orbit_distance = 30
             orbit_angle = { min = 0 max = 360 }
             satellite_naming_policy = lower_case_latin_letters
 
             moon = {
                 class = "pc_barren_cold"
+                name = "NAME_Miquelis"
                 size = 7
                 orbit_angle = { min = 0 max = 360 }
                 orbit_distance = @base_moon_distance
@@ -1351,6 +1371,7 @@ tvc_system_10 = {
     # Third star
     planet = {
         class = star
+        name = "NAME_Fodoleth"
         size = { min = 20 max = 25 }
         orbit_distance = 50
         orbit_angle = { min = 200  max = 280 }
@@ -1358,6 +1379,7 @@ tvc_system_10 = {
 
         planet = {
             class = "pc_molten"
+            name = "NAME_Burning_Love"
             size = 21
             orbit_distance = 35
             orbit_angle = { min = 0 max = 360 }
@@ -1365,6 +1387,7 @@ tvc_system_10 = {
 
             moon = {
                 class = "pc_molten"
+                name = "NAME_Milya"
                 size = 10
                 orbit_angle = { min = 0 max = 360 }
                 orbit_distance = @base_moon_distance
@@ -1373,6 +1396,7 @@ tvc_system_10 = {
 
         planet = {
             class = "pc_gas_giant"
+            name = "NAME_Gentle_Breeze"
             size = 22
             orbit_distance = 35
             orbit_angle = { min = 0 max = 360 }
@@ -1380,6 +1404,7 @@ tvc_system_10 = {
 
             moon = {
                 class = "pc_barren"
+                name = "NAME_Lini"
                 size = 12
                 orbit_angle = { min = 0 max = 360 }
                 orbit_distance = @base_moon_distance
@@ -1389,6 +1414,7 @@ tvc_system_10 = {
 
         planet = {
             class = "pc_barren"
+            name = "NAME_Harmony's_Reach"
             size = 21
             orbit_distance = 30
             orbit_angle = { min = 0 max = 360 }
@@ -1396,23 +1422,27 @@ tvc_system_10 = {
 
             moon = {
                 class = "pc_frozen"
+                name = "NAME_Lusina"
                 size = 9
                 orbit_angle = { min = 0 max = 360 }
                 orbit_distance = @base_moon_distance
             }
         } # Total star specific orbit distance is 100
 
-
+        # This habitable planet is not within the habitable zone but this is a heavily shroud
+        # influenced system so lore wise, it is ok.
         planet = {
             class = "pc_gaia"
             size = 20
-            name = "Sword of the West"
+            name = "NAME_Tenderheart"
             orbit_distance = 30
-            orbit_angle = { min = 0 max = 360 }
+            #orbit_angle = { min = 0 max = 360 }
+            orbit_angle = 0
             satellite_naming_policy = lower_case_latin_letters
 
             moon = {
                 class = "pc_frozen"
+                name = "NAME_Maswa"
                 size = 7
                 orbit_angle = { min = 0 max = 360 }
                 orbit_distance = @base_moon_distance
@@ -1421,6 +1451,7 @@ tvc_system_10 = {
     }
 }
 
+# Baodreth is the aspect of humility.
 tvc_system_11 = {
     name = "Baodreth"
     class = "sc_pulsar"
@@ -1443,14 +1474,18 @@ tvc_system_11 = {
 
     planet = {
         class = "pc_barren"
+        name = "NAME_Desert_of_the_Real"
         size = 23
         orbit_distance = 35
-        orbit_angle = { min = 0 max = 360 }
+        #orbit_angle = { min = 0 max = 360 }
+        orbit_angle = 0
 
         moon = {
             class = "pc_broken"
+            name = "NAME_A_Place_that_Could_Be"
             size = 14
-            orbit_angle = { min = 0 max = 360 }
+            #orbit_angle = { min = 0 max = 360 }
+            orbit_angle = 0
             orbit_distance = @base_moon_distance
         }
     } # Total orbit distance is 35
@@ -1459,15 +1494,18 @@ tvc_system_11 = {
     planet = {
         class = "pc_shattered"
         size = 22
-        name = "A Place that Once Was"
+        name = "NAME_A_Place_that_Once_Was"
         orbit_distance = 30
-        orbit_angle = { min = 0 max = 360 }
+        #orbit_angle = { min = 0 max = 360 }
+        orbit_angle = 0
         satellite_naming_policy = lower_case_latin_letters
 
         moon = {
             class = "pc_molten"
+            name = "NAME_Unending_Change"
             size = 9
-            orbit_angle = { min = 0 max = 360 }
+            #orbit_angle = { min = 0 max = 360 }
+            orbit_angle = 0
             orbit_distance = @base_moon_distance
         }
     } # Total orbit distance is 65
@@ -1476,14 +1514,15 @@ tvc_system_11 = {
 
     planet = {
         count = 6
-        name = "Ring of Destruction"
+        name = "NAME_Ring_of_Destruction"
         class = "pc_rare_crystal_asteroid"
         orbit_distance = 0
-        orbit_angle = { min = 0 max = 360 }
+        orbit_angle = { min = 90 max = 270 }
     }
 
     planet = {
         class = "pc_gas_giant"
+        name = "NAME_Quiet_Cyclone"
         size = 19
         orbit_distance = 30
         orbit_angle = { min = 0 max = 360 }
@@ -1491,9 +1530,11 @@ tvc_system_11 = {
 
         moon = {
             class = "pc_frozen"
+            name = "NAME_Haugrin"
             size = 7
-            orbit_angle = { min = 0 max = 360 }
-            orbit_distance = @base_moon_distance
+            #orbit_angle = { min = 0 max = 360 }
+            orbit_angle = 0
+            orbit_distance = 14
         }
     } # Total orbit distance is 120
 }
