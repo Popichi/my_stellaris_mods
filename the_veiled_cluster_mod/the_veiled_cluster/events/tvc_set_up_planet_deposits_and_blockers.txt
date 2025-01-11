@@ -1,22 +1,22 @@
-namespace = tvc
+# namespace = tvc
 
-# Move the home system
-country_event = {
-	id = tvc.4
-	hide_window = yes
-	is_triggered_only = yes
-	immediate = {
-		event_target:tvc_home_system = {
-			every_system_planet = {
-				limit = {
-					has_planet_flag = tvc_generator_planet
-				}
-				remove_deposit = yes
-				clear_planet_modifiers = yes
-				clear_blockers = yes
-				tvc_generator_planet_generate_start_deposits = yes
-				log = "Generator planet's name is: [This.GetName]."
-			}
-		}
-	}
-}
+# # Move the home system
+# country_event = {
+# 	id = tvc.4
+# 	hide_window = yes
+# 	is_triggered_only = yes
+# 	immediate = {
+# 		event_target:tvc_home_system = {
+# 			every_system_planet = {
+# 				limit = {
+# 					has_planet_flag = tvc_generator_planet
+# 				}
+# 				remove_deposit = yes
+# 				clear_planet_modifiers = yes
+# 				clear_blockers = yes
+# 				tvc_generator_planet_generate_start_deposits = yes
+# 				log = "Generator planet's name is: [This.GetName]."
+# 			}
+# 		}
+# 	}
+# }

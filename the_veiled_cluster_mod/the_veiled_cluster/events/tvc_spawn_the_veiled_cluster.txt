@@ -137,15 +137,31 @@ country_event = {
 						save_global_event_target_as = tvc_system_10
 					}
 				}
-				spawn_system = {
-					min_distance >= 20
-					max_distance <= 20
-					min_orientation_angle = 324
-					max_orientation_angle = 324
-					initializer = tvc_system_11
-					hyperlane = no
-					effect = {
-						save_global_event_target_as = tvc_system_11
+				if = {
+					limit = { has_global_flag = gigastructures_enabled }
+					spawn_system = {
+						min_distance >= 20
+						max_distance <= 20
+						min_orientation_angle = 324
+						max_orientation_angle = 324
+						initializer = tvc_system_11_gigastructures_version
+						hyperlane = no
+						effect = {
+							save_global_event_target_as = tvc_system_11
+						}
+					}
+				}
+				else = { # Spawn the vanilla version
+					spawn_system = {
+						min_distance >= 20
+						max_distance <= 20
+						min_orientation_angle = 324
+						max_orientation_angle = 324
+						initializer = tvc_system_11
+						hyperlane = no
+						effect = {
+							save_global_event_target_as = tvc_system_11
+						}
 					}
 				}
 			}

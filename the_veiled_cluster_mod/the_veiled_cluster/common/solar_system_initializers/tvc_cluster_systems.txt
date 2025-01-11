@@ -1477,15 +1477,13 @@ tvc_system_11 = {
         name = "NAME_Desert_of_the_Real"
         size = 23
         orbit_distance = 35
-        #orbit_angle = { min = 0 max = 360 }
-        orbit_angle = 0
+        orbit_angle = { min = 0 max = 360 }
 
         moon = {
             class = "pc_broken"
             name = "NAME_A_Place_that_Could_Be"
             size = 14
-            #orbit_angle = { min = 0 max = 360 }
-            orbit_angle = 0
+            orbit_angle = { min = 0 max = 360 }
             orbit_distance = @base_moon_distance
         }
     } # Total orbit distance is 35
@@ -1496,16 +1494,14 @@ tvc_system_11 = {
         size = 22
         name = "NAME_A_Place_that_Once_Was"
         orbit_distance = 30
-        #orbit_angle = { min = 0 max = 360 }
-        orbit_angle = 0
+        orbit_angle = { min = 0 max = 360 }
         satellite_naming_policy = lower_case_latin_letters
 
         moon = {
             class = "pc_molten"
             name = "NAME_Unending_Change"
             size = 9
-            #orbit_angle = { min = 0 max = 360 }
-            orbit_angle = 0
+            orbit_angle = { min = 0 max = 360 }
             orbit_distance = @base_moon_distance
         }
     } # Total orbit distance is 65
@@ -1532,8 +1528,7 @@ tvc_system_11 = {
             class = "pc_frozen"
             name = "NAME_Haugrin"
             size = 7
-            #orbit_angle = { min = 0 max = 360 }
-            orbit_angle = 0
+            orbit_angle = { min = 0 max = 360 }
             orbit_distance = 14
         }
     } # Total orbit distance is 120
@@ -1753,4 +1748,87 @@ tvc_wormhole_system = {
 			}
 		}
 	}
+}
+
+# Baodreth is the aspect of humility.
+tvc_system_11_gigastructures_version = {
+    name = "Baodreth"
+    class = "sc_giga_o_star"
+
+    asteroid_belt = {
+        type = crystal_asteroid_belt
+        radius = 150
+    }
+
+    flags = { tvc_system_11 tvc_system_11_gigastructure_version tvc_system empire_cluster }
+
+    # System's star
+    planet = {
+        class = star
+		name = "Baodreth"
+        size = 25
+        orbit_distance = 0
+        orbit_angle = 1
+    }
+
+    planet = {
+        class = "pc_barren"
+        name = "NAME_Desert_of_the_Real"
+        size = 23
+        orbit_distance = 95
+        orbit_angle = { min = 0 max = 360 }
+
+        moon = {
+            class = "pc_broken"
+            name = "NAME_A_Place_that_Could_Be"
+            size = 14
+            orbit_angle = { min = 0 max = 360 }
+            orbit_distance = @base_moon_distance
+        }
+    } # Total orbit distance is 95
+
+
+    planet = {
+        class = "pc_shattered"
+        size = 22
+        name = "NAME_A_Place_that_Once_Was"
+        orbit_distance = 30
+        orbit_angle = { min = 0 max = 360 }
+        satellite_naming_policy = lower_case_latin_letters
+
+        moon = {
+            class = "pc_molten"
+            name = "NAME_Unending_Change"
+            size = 9
+            orbit_angle = { min = 0 max = 360 }
+            orbit_distance = @base_moon_distance
+        }
+    } # Total orbit distance is 125
+
+    change_orbit = 25 # Total orbit distance is 150
+
+    planet = {
+        count = 6
+        name = "NAME_Ring_of_Destruction"
+        class = "pc_rare_crystal_asteroid"
+        orbit_distance = 0
+        orbit_angle = { min = 90 max = 270 }
+    }
+
+    planet = {
+        class = "pc_gas_giant"
+        name = "NAME_Quiet_Cyclone"
+        size = 19
+        orbit_distance = 30
+        orbit_angle = { min = 0 max = 360 }
+        satellite_naming_policy = lower_case_latin_letters
+
+        moon = {
+            class = "pc_frozen"
+            name = "NAME_Haugrin"
+            size = 7
+            orbit_angle = { min = 0 max = 360 }
+            orbit_distance = 14
+        }
+    } # Total orbit distance is 180
 }
