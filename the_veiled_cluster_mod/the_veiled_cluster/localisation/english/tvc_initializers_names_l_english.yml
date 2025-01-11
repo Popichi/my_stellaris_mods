@@ -83,3 +83,24 @@
   NAME_Evenvale:0 "Evenvale"
   NAME_Bauglir:0 "Bauglir" # From https://eldamo.org, meaning constrainer
   NAME_Tempered_Glass:0 "Tempered Glass"
+
+# The Veiled Cluster Imloth System
+  NAME_Imloth:0 "Imloth"
+  NAME_Subdued_Lust:0 "Subdued Lust"
+  NAME_Vende:0 "Vende" # From https://eldamo.org, meaning maiden, virgin
+  NAME_Purelight:0 "Purelight"
+  NAME_Three_Mountains:0 "Three Mountains"
+  NAME_Whiteshores:0 "Whiteshores"
+  NAME_Starshield:0 "Starshield"
+  NAME_Venesse:0 "Venesse" # From https://eldamo.org, meaning virginity
+  NAME_Snow_White:0 "Snow White"
+  NAME_Shards_of_Purity:0 "Shards of Purity"
+
+# The Veiled Cluster Volimleth System
+  NAME_Volimleth:0 "Volimleth"
+  NAME_Heart_of_Plenty:0 "Heart of Plenty"
+  NAME_Pebbles_of_Charity:0 "Pebbles of Charity"
+  NAME_Scarecrow:0 "Scarecrow"
+  NAME_Plentia:0 "Plentia"
+  NAME_Goldenfield:0 "Goldenfield"
+  NAME_Yavie:0 "Yavie" # From https://eldamo.org, autumn, harvest [time or act]
