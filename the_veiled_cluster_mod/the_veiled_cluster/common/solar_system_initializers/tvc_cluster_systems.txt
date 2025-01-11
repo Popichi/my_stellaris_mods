@@ -1111,7 +1111,7 @@ tvc_system_8 = {
 	} # Total orbit distance is 270
 }
 
-# Targonath is the aspect of generosity.
+# Targonath is the aspect of patience.
 tvc_system_9 = {
     name = "NAME_Targonath"
     class = "sc_binary_3"
@@ -1539,9 +1539,10 @@ tvc_system_11 = {
     } # Total orbit distance is 120
 }
 
+# Malodeth is the aspect of curiosity.
 tvc_wormhole_system = {
 	class = "sc_black_hole"
-	name = "Malodeth"
+	name = "NAME_Malodeth"
 
 	asteroid_belt = {
 		type = crystal_asteroid_belt
@@ -1551,7 +1552,7 @@ tvc_wormhole_system = {
 	flags = { tvc_wormhole_system tvc_system empire_cluster }
 
 	planet = {
-		name = "Malodeth"
+		name = "NAME_Malodeth"
 		class = "pc_black_hole"
 		orbit_distance = 0
 		orbit_angle = 1
@@ -1562,7 +1563,7 @@ tvc_wormhole_system = {
 	change_orbit = 45
 
 	planet = {
-		name = "Helca"
+		name = "NAME_Watcher_of_the_Abyss"
 		class = "pc_frozen"
 		orbit_distance = 40
 		orbit_angle = 15
@@ -1571,7 +1572,7 @@ tvc_wormhole_system = {
 	}
 
 	planet = {
-		name = "Watcher of the Abyss"
+		name = "NAME_Wonder's_Edge"
 		class = "pc_gaia"
 		orbit_distance = 25
 		orbit_angle = 125
@@ -1580,7 +1581,7 @@ tvc_wormhole_system = {
 	}
 
 	planet = {
-		name = "Frozen Forest"
+		name = "NAME_Frozen_Forest"
 		class = "pc_arctic"
 		orbit_distance = 25
 		orbit_angle = 120
@@ -1596,7 +1597,8 @@ tvc_wormhole_system = {
 
 		moon = {
 			class = "pc_barren_cold"
-			size = { min = 8 max = 22 }
+            name = "NAME_Nolondil"
+			size = 8
 			orbit_distance = 12
 			orbit_angle = 40
 			has_ring = no
@@ -1604,7 +1606,7 @@ tvc_wormhole_system = {
 	}
 
 	planet = {  
-		name = "Jailor of Darkness"
+		name = "NAME_Truthseeker"
 		class = "pc_gaia"
 		orbit_distance = 25
 		orbit_angle = 60
@@ -1613,7 +1615,7 @@ tvc_wormhole_system = {
 	}
 
 	planet = {
-		name = "Rune of Banishment"
+		name = "NAME_Rune_of_Banishment"
 		class = "pc_crystal_asteroid"
 		orbit_distance = 30
 		orbit_angle = -210
@@ -1622,7 +1624,7 @@ tvc_wormhole_system = {
 	}
 
 	planet = {
-		name = "Rune of Imprisonment"
+		name = "NAME_Rune_of_Imprisonment"
 		class = "pc_crystal_asteroid"
 		orbit_distance = 0
 		orbit_angle = -95
@@ -1631,7 +1633,7 @@ tvc_wormhole_system = {
 	}
 
 	planet = {
-		name = "Rune of Protection"
+		name = "NAME_Rune_of_Protection"
 		class = "pc_crystal_asteroid"
 		orbit_distance = 0
 		orbit_angle = 285
@@ -1640,7 +1642,7 @@ tvc_wormhole_system = {
 	}
 
 	planet = {
-		name = "Rune of Illusion"
+		name = "NAME_Rune_of_Illusion"
 		class = "pc_crystal_asteroid"
 		orbit_distance = 0
 		orbit_angle = -80
@@ -1649,7 +1651,7 @@ tvc_wormhole_system = {
 	}
 
 	planet = {
-		name = "Benedicted"
+		name = "NAME_Holy_Pursuit"
 		class = "pc_gas_giant"
 		orbit_distance = 40
 		orbit_angle = -160
@@ -1658,31 +1660,31 @@ tvc_wormhole_system = {
 		change_orbit = 6
 
 		moon = {
-			name = "Hollow Mountain"
+			name = "NAME_Hollow_Mountain"
 			class = "pc_barren_cold"
-			size = { min = 8 max = 22 }
+			size = 22
 			orbit_distance = 10
 			orbit_angle = 110
 			has_ring = no
 		}
 		moon = {
-			name = "Cold Oasis"
+			name = "NAME_Cold_Oasis"
 			class = "pc_barren_cold"
-			size = { min = 8 max = 22 }
+			size = 16
 			orbit_distance = 4
 			orbit_angle = 100
 			has_ring = no
 		}
 		moon = {
-			name = "Frozen City"
+			name = "NAME_Frozen_City"
 			class = "pc_frozen"
-			size = { min = 8 max = 22 }
+			size = 12
 			orbit_distance = 4
 			orbit_angle = 80
 			has_ring = no
 		}
 		moon = {
-			name = "Twilight Forest"
+			name = "NAME_Twilight_Forest"
 			class = "pc_gaia"
 			size = 22
 			orbit_distance = 4
@@ -1692,16 +1694,16 @@ tvc_wormhole_system = {
 	}
 
 	planet = {
-		name = "Valiant Mother"
+		name = "NAME_Well_of_Wisdom"
 		class = "pc_gas_giant"
-		orbit_distance = 25
+		orbit_distance = 55
 		orbit_angle = 170
 		size = 30
 		has_ring = yes
 		change_orbit = 7
 
 		moon = {
-			name = "Northern Breeze"
+			name = "NAME_Northern_Breeze"
 			class = "pc_arctic"
 			size = 20
 			orbit_distance = 12
@@ -1711,38 +1713,44 @@ tvc_wormhole_system = {
 	}
 
 	planet = {
-		name = "Deep Frost"
+		name = "NAME_Deep_Frost"
 		class = "pc_frozen"
-		orbit_distance = 25
+		orbit_distance = 35
 		orbit_angle = 125
 		size = 20
 		has_ring = no
 	}
 
 	planet = {
-		name = "River of Hatred"
+		name = "NAME_River_of_Hatred"
 		class = "pc_molten"
-		orbit_distance = 25
+		orbit_distance = 35
 		orbit_angle = -195
 		size = 20
 		has_ring = no
 		change_orbit = 4
 
 		moon = {
-			name = "Colorless Peak"
+			name = "NAME_Colorless_Peak"
 			class = "pc_barren_cold"
-			size = { min = 8 max = 22 }
+			size = 13
 			orbit_distance = 7
 			orbit_angle = 115
 			has_ring = no
 		}
 	}
 
-	# init_effect = {
-	# 	spawn_megastructure = {
-	# 		type = lgate_base
-	# 		orbit_angle = 225
-	# 		orbit_distance = 360
-	# 	}
-	# }
+    init_effect = {
+		spawn_planet = {
+			class = "pc_astral_scar"
+			spawn_beyond_gravity_well = yes
+			orbit_angle_offset = 360
+			size = 20
+			init_effect = {
+				set_name = "NAME_Astral_Scar"
+				add_anomaly = { category = ASTRAL_SCAR_CAT }
+                set_planet_flag = ignore_startup_effect
+			}
+		}
+	}
 }
