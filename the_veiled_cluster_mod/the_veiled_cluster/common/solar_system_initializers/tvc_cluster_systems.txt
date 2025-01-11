@@ -2,7 +2,7 @@
 
 tvc_home_system_initializer = {
     name = "NAME_Eternal_Beacon"
-    class = sc_b
+    class = "sc_b"
 
     asteroid_belt = {
         type = rocky_asteroid_belt
@@ -286,7 +286,7 @@ tvc_home_system_initializer = {
 # Artodath is the aspect of hope
 tvc_system_2 = {
     name = "NAME_Artodath"
-    class = sc_f
+    class = "sc_f"
 
     asteroid_belt = {
         type = icy_asteroid_belt
@@ -377,7 +377,7 @@ tvc_system_2 = {
         class = "pc_ice_asteroid"
         name = "NAME_Liquid_Hope"
         orbit_distance = 0
-        orbit_angle = { min = 0 max = 360 }
+        orbit_angle = { min = 90 max = 270 }
     }
 
     planet = {
@@ -442,6 +442,7 @@ tvc_system_3 = {
         }
     } # Total orbit distance is 45
 
+    # Habitable planets are within the habitable zone.
     planet = {
         class = "pc_gas_giant"
         name = "NAME_Everthankful"
@@ -474,7 +475,7 @@ tvc_system_3 = {
         class = "pc_asteroid"
         name = "NAME_Ring_of_Admiration"
         orbit_distance = 0
-        orbit_angle = { min = 0 max = 360 }
+        orbit_angle = { min = 90 max = 270 }
     }
 
     planet = {
@@ -503,13 +504,14 @@ tvc_system_3 = {
     } # Total orbit distance is 195
 }
 
+# Ceadreth is the aspect of forgiveness
 tvc_system_4 = {
-    name = "Ceadreth"
-    class = sc_g
+    name = "NAME_Ceadreth"
+    class = "sc_g"
 
     asteroid_belt = {
         type = icy_asteroid_belt
-        radius = 190
+        radius = 210
     }
 
     flags = { tvc_system_4 tvc_system empire_cluster }
@@ -517,7 +519,7 @@ tvc_system_4 = {
     # System's star
     planet = {
         class = star
-		name = "Ceadreth"
+		name = "NAME_Ceadreth"
         size = 27
         orbit_distance = 0
         orbit_angle = 1
@@ -525,31 +527,32 @@ tvc_system_4 = {
 
     planet = {
         class = "pc_molten"
-        name = "Rorin"
-        size = 25
+        name = "NAME_Soulmend"
+        size = 19
         orbit_distance = 30
         orbit_angle = { min = 0 max = 360 }
 
         moon = {
             class = "pc_molten"
-            name = "Vsima"
-            size = 14
+            name = "NAME_Orava"
+            size = 9
             orbit_distance = @base_moon_distance
             orbit_angle = { min = 0 max = 360 }
         }
     } # Total orbit distance is 30
 
+    # Habitable planets are within the habitable zone.
     planet = {
         class = "pc_gaia"
-        name = "Eodrith"
+        name = "NAME_New_Dawn"
         size = 25
         orbit_distance = 40
         orbit_angle = { min = 0 max = 360 }
 
         moon = {
             class = "pc_shrouded"
-            name = "Maorin"
-            size = 18
+            name = "NAME_Avatyar"
+            size = 13
             orbit_distance = @base_moon_distance
             orbit_angle = { min = 0 max = 360 }
         }
@@ -557,14 +560,14 @@ tvc_system_4 = {
 
     planet = {
         class = "pc_toxic"
-        name = "Ureal"
+        name = "NAME_Vandetta's_End"
         size = 25
         orbit_distance = 40
         orbit_angle = { min = 0 max = 360 }
 
         moon = {
             class = "pc_frozen"
-            name = "Qodvin"
+            name = "NAME_Apsen"
             size = 14
             orbit_distance = @base_moon_distance
             orbit_angle = { min = 0 max = 360 }
@@ -572,16 +575,16 @@ tvc_system_4 = {
 
         moon = {
             class = "pc_barren_cold"
-            name = "Humel"
-            size = 11
-            orbit_distance = @base_moon_distance
+            name = "NAME_Puictha"
+            size = 10
+            orbit_distance = 7
             orbit_angle = { min = 0 max = 360 }
         }
     } # Total orbit distance is 110
 
     planet = {
         class = "pc_gas_giant"
-        name = "Ureal"
+        name = "NAME_Forgivence"
         size = 25
         orbit_distance = 50
         orbit_angle = { min = 0 max = 360 }
@@ -589,43 +592,44 @@ tvc_system_4 = {
 
         moon = {
             class = "pc_barren"
-            name = "Poilin"
+            name = "NAME_Dihena"
             size = 14
-            orbit_distance = @base_moon_distance
+            orbit_distance = 13
             orbit_angle = { min = 0 max = 360 }
         }
 
         moon = {
             class = "pc_toxic"
-            name = "Humel"
+            name = "NAME_Gohena"
             size = 11
-            orbit_distance = @base_moon_distance
+            orbit_distance = 6
             orbit_angle = { min = 0 max = 360 }
         }
     } # Total orbit distance is 160
 
-    change_orbit = 30 # Total orbit distance is 190
+    change_orbit = 50 # Total orbit distance is 210
 
     planet = {
         count = 7
         class = "pc_ice_asteroid"
-        name = "Tears of Nimroth"
+        name = "NAME_Tears_of_a_Past_Grudge"
         orbit_distance = 0
-        orbit_angle = { min = 0 max = 360 }
+        orbit_angle = { min = 90 max = 270 }
     }
 }
 
 # Ring World system
+# Parikonath is the aspect of diligence
 tvc_system_5 = {
-    name = "Parikonath"
-    class = sc_k
+    name = "NAME_Parikonath"
+    class = "sc_k"
 
     flags = { tvc_system_5 tvc_system empire_cluster }
 
     # System's star
     planet = {
         class = star
-		name = "Parikonath"
+		name = "NAME_Parikonath"
         size = 25
         orbit_distance = 0
         orbit_angle = 1
@@ -639,7 +643,7 @@ tvc_system_5 = {
 	change_orbit = 45 # Total orbit distance is 45
 
 	planet = {
-        name = "NAME_Habitable_Section_A"
+        name = "NAME_Ironwill"
         class = "pc_ringworld_habitable"
         orbit_angle = 30
         orbit_distance = 0
@@ -660,32 +664,7 @@ tvc_system_5 = {
     }
 
     planet = {
-        name = "NAME_Habitable_Section_B"
-        class = "pc_ringworld_habitable"
-        orbit_angle = 30
-        orbit_distance = 0
-        modifiers = none
-        deposit_blockers = none
-    }
-    planet = {
-        name = "NAME_Ring_Section"
-        class = "pc_ringworld_tech"
-        orbit_angle = 30
-        orbit_distance = 0
-
-		init_effect = {
-		    set_deposit = d_physics_2
-		}
-    }
-    planet = {
-        name = "NAME_Ring_Section"
-        class = "pc_ringworld_seam"
-        orbit_angle = 30
-        orbit_distance = 0
-    }
-
-    planet = {
-        name = "NAME_Habitable_Section_C"
+        name = "NAME_Toilhaven"
         class = "pc_ringworld_habitable"
         orbit_angle = 30
         orbit_distance = 0
@@ -703,14 +682,10 @@ tvc_system_5 = {
         class = "pc_ringworld_seam"
         orbit_angle = 30
         orbit_distance = 0
-
-		init_effect = {
-		    set_deposit = d_engineering_4
-		}
     }
 
     planet = {
-        name = "NAME_Habitable_Section_D"
+        name = "NAME_Brightforge"
         class = "pc_ringworld_habitable"
         orbit_angle = 30
         orbit_distance = 0
@@ -722,20 +697,33 @@ tvc_system_5 = {
         class = "pc_ringworld_tech"
         orbit_angle = 30
         orbit_distance = 0
-		
-		init_effect = {
-		    set_deposit = d_alloys_3
-		}
     }
     planet = {
         name = "NAME_Ring_Section"
         class = "pc_ringworld_seam"
         orbit_angle = 30
         orbit_distance = 0
-		
-		init_effect = {
-			set_deposit = d_exotic_gases_4
-		}
+    }
+
+    planet = {
+        name = "NAME_Blueanvil"
+        class = "pc_ringworld_habitable"
+        orbit_angle = 30
+        orbit_distance = 0
+        modifiers = none
+        deposit_blockers = none
+    }
+    planet = {
+        name = "NAME_Ring_Section"
+        class = "pc_ringworld_tech"
+        orbit_angle = 30
+        orbit_distance = 0
+    }
+    planet = {
+        name = "NAME_Ring_Section"
+        class = "pc_ringworld_seam"
+        orbit_angle = 30
+        orbit_distance = 0
     }
 	
 	change_orbit = 55 # Total orbit distance is 100
@@ -743,14 +731,20 @@ tvc_system_5 = {
 	planet = {
 		count = 4
 		class = "pc_asteroid"
-        name = "Remains of a Dream"
+        name = "NAME_Mines_of_Parikonath"
 		orbit_distance = 0
-		orbit_angle = { min = 0 max = 360 }
+		orbit_angle = { min = 90 max = 270 }
+        init_effect = {
+            add_deposit = d_minerals_2
+            add_deposit = d_alloys_1
+        }
 	}
 	
+    # Habitable planet is outside the habitable zone but this is a heavily shroud influenced 
+    # system. So, it is ok for lore purposes.
 	planet = {
 		class = "pc_gas_giant"
-        name = "Calderon"
+        name = "NAME_Ironspire"
         orbit_distance = 55
 		orbit_angle = { min = 0 max = 360 }
 		size = 25
@@ -760,15 +754,18 @@ tvc_system_5 = {
 
 		moon = {
             class = "pc_gaia"
-            name = "Lomean"
+            name = "NAME_Crystalwoods"
             size = 23
             orbit_distance = @base_moon_distance
             orbit_angle = { min = 0 max = 360 }
+            init_effect = {
+                add_deposit = d_crystal_forest
+            }
         }
 
         moon = {
             class = "pc_barren"
-            name = "Lornan"
+            name = "NAME_Mole"
             size = 17
             orbit_distance = @base_moon_distance
             orbit_angle = { min = 0 max = 360 }
@@ -776,7 +773,7 @@ tvc_system_5 = {
 
         moon = {
             class = "pc_toxic"
-            name = "Kimlan"
+            name = "NAME_Finya"
             size = 13
             orbit_distance = @base_moon_distance
             orbit_angle = { min = 0 max = 360 }
@@ -785,14 +782,14 @@ tvc_system_5 = {
 
     planet = {
         class = "pc_shrouded"
-        name = "Mithret"
+        name = "NAME_Veiledforge"
         size = 21
         orbit_distance = 60
         orbit_angle = { min = 0 max = 360 }
 
         moon = {
             class = "pc_shrouded"
-            name = "Curun"
+            name = "NAME_Mirya"
             size = 9
             orbit_distance = @base_moon_distance
             orbit_angle = { min = 0 max = 360 }
@@ -801,7 +798,7 @@ tvc_system_5 = {
 	
 	planet = {
 		class = "pc_barren_cold"
-        name = "Hiedlin"
+        name = "NAME_Craftspire"
         size = 23
 		orbit_distance = 25
 		orbit_angle = { min = 0 max = 360 }
