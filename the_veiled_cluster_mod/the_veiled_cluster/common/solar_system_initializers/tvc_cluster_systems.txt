@@ -806,9 +806,10 @@ tvc_system_5 = {
 	
 }
 
+# Kitaroneth is the aspect of temperance
 tvc_system_6 = {
-    name = "Kitaroneth"
-    class = sc_f
+    name = "NAME_Kitaroneth"
+    class = "sc_f"
 
     asteroid_belt = {
         type = rocky_asteroid_belt
@@ -825,7 +826,7 @@ tvc_system_6 = {
     # System's star
     planet = {
         class = star
-		name = "Kitaroneth"
+		name = "NAME_Kitaroneth"
         size = 30
         orbit_distance = 0
         orbit_angle = 1
@@ -833,15 +834,15 @@ tvc_system_6 = {
 
     planet = {
         class = "pc_molten"
-        name = "Sedras"
-        size = 21
+        name = "NAME_Evenflow"
+        size = 20
         orbit_distance = 40
         orbit_angle = { min = 0 max = 360 }
 
         moon = {
             class = "pc_toxic"
-            name = "Qun"
-            size = 11
+            name = "NAME_Luntha"
+            size = 10
             orbit_distance = @base_moon_distance
             orbit_angle = { min = 0 max = 360 }
         }
@@ -850,16 +851,16 @@ tvc_system_6 = {
     change_orbit = 35 # Total orbit distance is 75
 
     planet = {
-        count = 2
+        count = 3
         class = "pc_asteroid"
-        name = "Ieo"
+        name = "NAME_Ring_of_Balance"
         orbit_distance = 0
-        orbit_angle = { min = 0 max = 360 }
+        orbit_angle = { min = 90 max = 270 }
     }
 
     planet = {
         class = "pc_gas_giant"
-        name = "Idras"
+        name = "NAME_Tranquil_Reach"
         size = 20
         orbit_distance = 40
         orbit_angle = { min = 0 max = 360 }
@@ -868,29 +869,29 @@ tvc_system_6 = {
 
     planet = {
         class = "pc_frozen"
-        name = "Seds"
+        name = "NAME_Evenvale"
         size = 18
-        orbit_distance = 40
+        orbit_distance = 30
         orbit_angle = { min = 0 max = 360 }
         has_ring = yes
 
         moon = {
             class = "pc_barren_cold"
-            name = "Yvril"
+            name = "NAME_Bauglir"
             size = 7
             orbit_distance = @base_moon_distance
             orbit_angle = { min = 0 max = 360 }
         }
-    } # Total orbit distance is 155
+    } # Total orbit distance is 145
 
-    change_orbit = 20 # Total orbit distance is 175
+    change_orbit = 30 # Total orbit distance is 175
     
     planet = {
         count = 7
         class = "pc_ice_asteroid"
-        name = "Orilin"
+        name = "NAME_Tempered_Glass"
         orbit_distance = 0
-        orbit_angle = { min = 0 max = 360 }
+        orbit_angle = { min = 90 max = 270 }
     } 
 }
 

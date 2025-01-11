@@ -73,3 +73,13 @@
   NAME_Veiledforge:0 "Veiledforge"
   NAME_Craftspire:0 "Craftspire"
   NAME_Mirya:0 "Mirya" # From https://eldamo.org, meaning beautiful, lovely (of works of art only)
+
+# The Veiled Cluster Kitaroneth System
+  NAME_Kitaroneth:0 "Kitaroneth"
+  NAME_Evenflow:0 "Evenflow"
+  NAME_Luntha:0 "Luntha" # From https://eldamo.org, meaning to balance, weigh
+  NAME_Ring_of_Balance:0 "Ring of Balance"
+  NAME_Tranquil_Reach:0 "Tranquil Reach"
+  NAME_Evenvale:0 "Evenvale"
+  NAME_Bauglir:0 "Bauglir" # From https://eldamo.org, meaning constrainer
+  NAME_Tempered_Glass:0 "Tempered Glass"
