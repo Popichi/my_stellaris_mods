@@ -183,6 +183,8 @@ tvc_home_system_initializer = {
     } # Total orbit distance is 190
 
     # Habitable planets
+    # These planets are way outside the habitable zone of 60 to 100 but this is
+    # a heavily shroud influenced system. So, it is ok for lore purposes.
     planet = {
         class = "pc_gaia"
 		name = "NAME_Veiled_Garden"
@@ -318,6 +320,7 @@ tvc_system_2 = {
         }
     } # Total orbit distance is 40
 
+    # Habitable planet is within the habitable zone of 60 to 100.
     planet = {
         class = "pc_gas_giant"
         name = "NAME_Eye_of_the_Storm"
@@ -349,6 +352,7 @@ tvc_system_2 = {
         size = 25
         orbit_distance = 55
         orbit_angle = { min = 0 max = 360 }
+        has_ring = no
 
         init_effect = {
             add_modifier = {
@@ -393,13 +397,14 @@ tvc_system_2 = {
     } # Total orbit distance is 215
 }
 
+# Ithadeth is the aspect of gratitude
 tvc_system_3 = {
-    name = "Ithadeth"
+    name = "NAME_Ithadeth"
     class = "sc_a"
 
     asteroid_belt = {
         type = rocky_asteroid_belt
-        radius = 120
+        radius = 135
     }
 
     flags = { tvc_system_3 tvc_system empire_cluster }
@@ -407,7 +412,7 @@ tvc_system_3 = {
     # System's star
     planet = {
         class = star
-		name = "Ithadeth"
+		name = "NAME_Ithadeth"
         size = 30
         orbit_distance = 0
         orbit_angle = 1
@@ -415,31 +420,31 @@ tvc_system_3 = {
 
     planet = {
         class = "pc_shrouded"
-        name = "Kadros"
+        name = "NAME_Grateful_Whisper"
         size = 23
-        orbit_distance = 40
+        orbit_distance = 45
         orbit_angle = { min = 0 max = 360 }
 
         moon = {
             class = "pc_molten"
-            name = "Telados"
-            size = 16
-            orbit_distance = @base_moon_distance
+            name = "NAME_Hantale"
+            size = 14
+            orbit_distance = 7
             orbit_angle = { min = 0 max = 360 }
         }
 
         moon = {
             class = "pc_barren"
-            name = "Barados"
-            size = 11
-            orbit_distance = @base_moon_distance
+            name = "NAME_Hannad"
+            size = 9
+            orbit_distance = 5
             orbit_angle = { min = 0 max = 360 }
         }
-    } # Total orbit distance is 40
+    } # Total orbit distance is 45
 
     planet = {
         class = "pc_gas_giant"
-        name = "Simpferon"
+        name = "NAME_Everthankful"
         size = 25
         orbit_distance = 50
         orbit_angle = { min = 0 max = 360 }
@@ -447,7 +452,7 @@ tvc_system_3 = {
 
         moon = {
             class = "pc_gaia"
-            name = "Maiden of Flowers"
+            name = "NAME_Land_of_Praise"
             size = 25
             orbit_distance = 15
             orbit_angle = { min = 0 max = 360 }
@@ -455,47 +460,47 @@ tvc_system_3 = {
 
         moon = {
             class = "pc_gaia"
-            name = "Silverwoods"
+            name = "NAME_Silverwoods"
             size = 23
             orbit_distance = @base_moon_distance
             orbit_angle = { min = 0 max = 360 }
         }
-    } # Total orbit distance is 90
+    } # Total orbit distance is 95
 
-    change_orbit = 30 # Total orbit distance is 120
+    change_orbit = 40 # Total orbit distance is 135
 
     planet = {
         count = 3
         class = "pc_asteroid"
-        name = "Ring of Trials"
+        name = "NAME_Ring_of_Admiration"
         orbit_distance = 0
         orbit_angle = { min = 0 max = 360 }
     }
 
     planet = {
         class = "pc_gas_giant"
-        name = "Sieon"
+        name = "NAME_Grateful_Embrace"
         size = 25
         orbit_distance = 30
         orbit_angle = { min = 0 max = 360 }
         has_ring = yes
-    } # Total orbit distance is 150
+    } # Total orbit distance is 165
 
     planet = {
         class = "pc_frozen"
-        name = "Elion"
-        size = 22
+        name = "NAME_Frozen_Tribute"
+        size = 21
         orbit_distance = 30
         orbit_angle = { min = 0 max = 360 }
 
         moon = {
             class = "pc_barren_cold"
-            name = "Viasma"
-            size = 17
+            name = "NAME_Annad"
+            size = 13
             orbit_distance = @base_moon_distance
             orbit_angle = { min = 0 max = 360 }
         }
-    } # Total orbit distance is 180
+    } # Total orbit distance is 195
 }
 
 tvc_system_4 = {
