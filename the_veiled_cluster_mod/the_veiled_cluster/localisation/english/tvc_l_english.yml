@@ -3,3 +3,7 @@
   origin_tvc_desc:0 "TO BE FILLED!"
 
   origin_tvc_effects:0 "TO BE FILLED!"
+
+  # Immortality trait
+  trait_immortal:0 "Immortal"
+  trait_immortal_desc:0 "Time, the relentless sculptor, holds no chisel sharp enough to carve lines upon these ageless beings."

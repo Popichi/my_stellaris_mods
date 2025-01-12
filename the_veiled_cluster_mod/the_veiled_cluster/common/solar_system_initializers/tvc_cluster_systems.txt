@@ -31,6 +31,18 @@ tvc_home_system_initializer = {
             set_planet_flag = starting_mining_target
 		    set_planet_flag = starting_deposit
             add_deposit = d_energy_30
+
+            create_ambient_object = {
+				type = "nebula_L8_entity"
+				location = this
+			}
+			last_created_ambient_object = {
+				set_location = {
+					target = prev
+					distance = 0
+					angle = random
+				}
+			}
         }
     }
 
@@ -302,6 +314,17 @@ tvc_system_2 = {
         size = 27
         orbit_distance = 0
         orbit_angle = 1
+        create_ambient_object = {
+            type = "nebula_L8_entity"
+            location = this
+        }
+        last_created_ambient_object = {
+            set_location = {
+                target = prev
+                distance = 0
+                angle = random
+            }
+        }
     }
 
     planet = {
@@ -416,6 +439,17 @@ tvc_system_3 = {
         size = 30
         orbit_distance = 0
         orbit_angle = 1
+        create_ambient_object = {
+            type = "nebula_L8_entity"
+            location = this
+        }
+        last_created_ambient_object = {
+            set_location = {
+                target = prev
+                distance = 0
+                angle = random
+            }
+        }
     }
 
     planet = {
@@ -523,6 +557,17 @@ tvc_system_4 = {
         size = 27
         orbit_distance = 0
         orbit_angle = 1
+        create_ambient_object = {
+            type = "nebula_L8_entity"
+            location = this
+        }
+        last_created_ambient_object = {
+            set_location = {
+                target = prev
+                distance = 0
+                angle = random
+            }
+        }
     }
 
     planet = {
@@ -633,6 +678,17 @@ tvc_system_5 = {
         size = 25
         orbit_distance = 0
         orbit_angle = 1
+        create_ambient_object = {
+            type = "nebula_L8_entity"
+            location = this
+        }
+        last_created_ambient_object = {
+            set_location = {
+                target = prev
+                distance = 0
+                angle = random
+            }
+        }
     }
 	
 	asteroid_belt = {
@@ -830,6 +886,17 @@ tvc_system_6 = {
         size = 30
         orbit_distance = 0
         orbit_angle = 1
+        create_ambient_object = {
+            type = "nebula_L8_entity"
+            location = this
+        }
+        last_created_ambient_object = {
+            set_location = {
+                target = prev
+                distance = 0
+                angle = random
+            }
+        }
     }
 
     planet = {
@@ -920,6 +987,17 @@ tvc_system_7 = {
 		orbit_angle = 1
 		size = { min = 20 max = 30 }
 		has_ring = no
+        create_ambient_object = {
+            type = "nebula_L8_entity"
+            location = this
+        }
+        last_created_ambient_object = {
+            set_location = {
+                target = prev
+                distance = 0
+                angle = random
+            }
+        }
 	}
 
 	 planet = {
@@ -1030,6 +1108,17 @@ tvc_system_8 = {
 		size = 30
 		has_ring = no
 		flags = { main_star }
+        create_ambient_object = {
+            type = "nebula_L8_entity"
+            location = this
+        }
+        last_created_ambient_object = {
+            set_location = {
+                target = prev
+                distance = 0
+                angle = random
+            }
+        }
 	} # Total orbit distance is 60
 
 	 planet = {
@@ -1132,6 +1221,18 @@ tvc_system_9 = {
 		size = { min = 20 max = 30 }
 		has_ring = no
         flags = { main_star }
+
+        create_ambient_object = {
+            type = "nebula_L8_entity"
+            location = this
+        }
+        last_created_ambient_object = {
+            set_location = {
+                target = prev
+                distance = 0
+                angle = random
+            }
+        }
 	} # Total orbit distance is 25
 
 	 planet = {
@@ -1237,6 +1338,18 @@ tvc_system_10 = {
         orbit_angle = 1
         satellite_naming_policy = upper_case_roman_numerals
         flags = { main_star }
+
+        create_ambient_object = {
+            type = "nebula_L8_entity"
+            location = this
+        }
+        last_created_ambient_object = {
+            set_location = {
+                target = prev
+                distance = 0
+                angle = random
+            }
+        }
 
         planet = {
             class = "pc_molten"
@@ -1470,6 +1583,18 @@ tvc_system_11 = {
         size = 25
         orbit_distance = 0
         orbit_angle = 1
+
+        create_ambient_object = {
+            type = "nebula_L8_entity"
+            location = this
+        }
+        last_created_ambient_object = {
+            set_location = {
+                target = prev
+                distance = 0
+                angle = random
+            }
+        }
     }
 
     planet = {
@@ -1553,6 +1678,18 @@ tvc_wormhole_system = {
 		orbit_angle = 1
 		size = 30
 		has_ring = no
+
+        create_ambient_object = {
+            type = "nebula_L8_entity"
+            location = this
+        }
+        last_created_ambient_object = {
+            set_location = {
+                target = prev
+                distance = 0
+                angle = random
+            }
+        }
 	}
 
 	change_orbit = 45

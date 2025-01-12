@@ -1,0 +1,17 @@
+##################
+# Species Traits #
+##################
+
+trait_immortal = {
+	cost = 0
+	potential_crossbreeding_chance = 1.0
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	# QUESTION: How can I prevent AI from choosing this trait randomly?
+	ai_weight = 0
+	randomized = no
+	modification = no
+	slave_cost = {
+		energy = 4000
+	}
+	immortal_leaders = yes
+}

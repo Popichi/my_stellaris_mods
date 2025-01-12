@@ -38,6 +38,11 @@ country_event = {
 			# is achieved by spawning the edge systems within the scope of the decagon center as 
 			# "event_target:tvc_home_system = { ... }"
 			event_target:tvc_home_system = {
+				create_nebula = {
+					name = "The Veil"
+					radius = 70
+					#effect = { <effects on every system in the new nebula> }
+				}
 				spawn_system = {
 					min_distance >= 20
 					max_distance <= 20
