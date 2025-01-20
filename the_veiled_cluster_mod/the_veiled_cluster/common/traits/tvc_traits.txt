@@ -3,6 +3,7 @@
 ##################
 
 trait_immortal = {
+	icon = "gfx/interface/icons/traits/trait_immortal.dds"
 	cost = 0
 	potential_crossbreeding_chance = 1.0
 	allowed_archetypes = { BIOLOGICAL LITHOID }
