@@ -233,25 +233,6 @@ country_event = {
 			system_event = { id = tvc.5 }
 		}
 
-		#create_cluster - Creates a cluster centered around the specified spatial object
-		# create_cluster = {
-		# 	id = "test_cluster"
-		# 	center = event_target:tvc_home_system
-		# 	radius = 70
-		# }
-
-		# # Then iterate over that newly created cluster
-		# every_system_in_cluster = {
-		# 	limit = {
-		# 		is_in_cluster = "test_cluster"
-		# 		# or possibly something like 
-		# 		# is_in_cluster = my_cluster
-		# 	}
-		# 	# Apply your effects here to each system in that cluster
-		# 	system_event = { id = tvc.5 }
-		# 	log = "System'sname in the cluster is: [This.GetName]."
-		# }
-
 		# Add hyperlanes
 		# The edges of the decagon are connected to the center i.e. the home system and the 
 		# previous edge i.e. the previously spawned system. This is true for all systems except 
@@ -635,6 +616,34 @@ system_event = {
 		# Pulsar
 		else_if = {
 			limit = { is_star_class = sc_pulsar }
+			random_list = {
+				20 = { create_nebula_3 = yes }
+				20 = { create_nebula_4 = yes }
+				10 = { create_rare_nebula_1 = yes }
+				10 = { create_rare_nebula_2 = yes }
+				4 = {
+					modifier = {
+						factor = 0
+						has_star_flag = empire_home_system
+					}
+					create_turbulent_nebula_1 = yes
+				}
+				4 = {
+					modifier = {
+						factor = 0
+						has_star_flag = empire_home_system
+					}
+					create_turbulent_nebula_2 = yes
+				}
+			}
+		}
+		else_if = {
+			limit = { 
+				AND = {
+					has_global_flag = gigastructures_enabled
+					is_star_class = sc_giga_o_star
+				}
+			}
 			random_list = {
 				20 = { create_nebula_3 = yes }
 				20 = { create_nebula_4 = yes }
