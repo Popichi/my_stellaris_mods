@@ -14,8 +14,8 @@ country_event = {
 		}
 
 		# TO DO: Figure out if you need to modify the code below and then continue adapting the 
-		# code starting from line 82 of 
-		# Steam\steamapps\workshop\content\281990\1999512770\events\egs_colony_events.txt
+		# code starting from line 162 of 
+		# C:\Program Files (x86)\Steam\steamapps\workshop\content\281990\1999512770\common\scripted_effects\egs_scripted_effects.txt
 		#tag our old home planet
 		capital_scope = {
 			save_event_target_as = previous_home_planet
@@ -81,19 +81,29 @@ country_event = {
 		}
 
 		# Set up the capital planet
+		# 2 different steps because I want create_colony to run and its scope to finalise before I poke the colony
+        # Then move all the pops to it first.  This way pop-numbers triggers will be met for the capital buildings.
+		# Taken from C:\Program Files (x86)\Steam\steamapps\workshop\content\281990\1999512770\events\egs_colony_events.txt
+		# line 26
 		event_target:tvc_home_planet = {
+			create_colony = { owner = root }
 			remove_deposit = yes
 			remove_planet_flag = starting_deposit
 			remove_planet_flag = starting_mining_target
 			remove_planet_flag = starting_research_target
 			clear_planet_modifiers = yes
 			clear_blockers = yes
-			set_owner = root
-			set_controller = root
-			set_capital = yes			
+			#set_owner = root
+			#set_controller = root
+			set_capital = yes
+			set_sector_capital = yes			
 			generate_start_deposits_and_blockers = yes
 			tvc_home_planet_generate_start_deposits = yes
-			generate_start_buildings_and_districts = yes			
+			generate_start_buildings_and_districts = yes
+			if = {
+				limit = { exists = event_target:sector_gov}
+				assign_leader = event_target:sector_gov
+			}			
 		}
 
 		event_target:tvc_home_system = {
@@ -119,48 +129,58 @@ country_event = {
 		every_owned_fleet = {
 			limit = {
 				any_owned_ship = {
-					OR = {
-						is_ship_size = corvette
-						is_ship_size = constructor
-						is_ship_size = science
+					NOR = {
+						is_ship_class = shipclass_military_station
+						is_ship_class = shipclass_mining_station
+						is_ship_class = shipclass_research_station
+						is_ship_class = shipclass_starbase
 					}
 				}
 			}
 			set_location = event_target:tvc_home_system
 		}
 
+		# TO DO: Try lower case field names!
 		event_target:previous_home_planet = {
-			# move pops
-			every_owned_pop = {
-				resettle_pop = {
-					pop = this
-					planet = event_target:tvc_home_planet
-				}
-				unemploy_pop = yes
-			}
-			# then get rid of the planet
-			#remove_planet = yes
+			every_owned_pop_group = {
+                resettle_pop_group = {
+                    POP_GROUP = this
+                    PLANET = event_target:tvc_home_planet
+                    PERCENTAGE = 1
+                }
+            }
 		}
 
-		# 2.6 introduced a change to the every_owned_pop = { resettle_pop = { loop where it would recalculate jobs between
-		# and end up with unemployed rulers.  
-		# 2.7 has given some simple effects to fix this: force an unemploy, demote to worker and then rerun the employment calculation
-		# 3.3 checnged the pop recalc to only do 1 pop at a time, so to fix need to loop over all pops, but return to planet scope.  
+		# Adapted from C:\Program Files (x86)\Steam\steamapps\workshop\content\281990\1999512770\common\scripted_effects\egs_scripted_effects.txt
+		# line 572
 		event_target:tvc_home_planet = {
-			every_owned_pop = {
-				unemploy_pop = yes
-				clear_pop_category = yes
-			}
-			every_owned_pop = {
-				prev = {
-					check_planet_employment = yes
-				}				
-			}
-			set_sector_capital = yes
+			#every_owned_pop = {
+			#	unemploy_pop = yes
+			#	clear_pop_category = yes
+			#}
+			#every_owned_pop = {
+			#	prev = {
+			#		check_planet_employment = yes
+			#	}				
+			#}
+			#set_sector_capital = yes
+			#if = {
+			#	limit = { exists = event_target:sector_gov}
+			#	assign_leader = event_target:sector_gov
+			#}
+			generate_start_buildings_and_districts = yes
+			# generate_start_pops = yes
+            generate_home_planet_final_pass = yes
+
 			if = {
-				limit = { exists = event_target:sector_gov}
-				assign_leader = event_target:sector_gov
+				limit = { ROOT = { is_ascensionist_empire = yes } }
+				set_planetary_ascension_tier = 1
 			}
+
+			# As we created the colony then added buildings, we may get left with a colony shelter.
+			remove_building = building_colony_shelter
+			remove_building = building_deployment_post
+			remove_building = building_hab_capital
 		}
 
 		event_target:previous_home_system = {
@@ -180,6 +200,28 @@ country_event = {
 			every_fleet_in_system = {
 				delete_fleet = this
 			}
+		}
+
+		event_target:tvc_home_planet {
+			# fix unemployed pops
+			every_owned_pop_group = {
+				limit = { is_unemployed = yes }
+				save_event_target_as = old_pop_group
+				prev = {
+					create_pop_group = {
+						pop_group = event_target:old_pop_group
+						category = civilian
+						effect = {
+							transfer_pop_amount = {
+								source = event_target:old_pop_group
+								target = this
+								percentage = 1
+							}
+						}
+					}
+				}
+			}
+			check_planet_employment = yes
 		}
 
 		owner_species = { 
