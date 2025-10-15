@@ -232,7 +232,7 @@ tvc_home_system_initializer = {
 		
 		moon = {
             class = "pc_gaia"
-			name = "NAME_Gloompeak"
+			name = "NAME_Gloompeak_Moon"
 			size = 21
             orbit_distance = 10
             orbit_angle = { min = 0 max = 360 }

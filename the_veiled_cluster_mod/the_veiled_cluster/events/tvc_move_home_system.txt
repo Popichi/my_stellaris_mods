@@ -99,7 +99,7 @@ country_event = {
 			set_sector_capital = yes			
 			generate_start_deposits_and_blockers = yes
 			tvc_home_planet_generate_start_deposits = yes
-			generate_start_buildings_and_districts = yes
+			#generate_start_buildings_and_districts = yes
 			if = {
 				limit = { exists = event_target:sector_gov}
 				assign_leader = event_target:sector_gov
