@@ -1,0 +1,27 @@
+# Taken from line 1616 of Stellaris\common\game_rules\00_rules.txt
+# Root = country attempting to target system for movement
+# This = system being targeted
+can_enter_system_by_jump = {
+	custom_tooltip = {
+#		success_text = "debug: can jump"
+		fail_text = cannot_jump_to_system
+
+		# Sealed system
+		OR = {
+			NOT = { has_star_flag = sealed_system }
+			AND = {
+				root = { has_country_flag = entered_sealed_system }
+				has_star_flag = sealed_system
+			}
+		}
+
+		# L-Cluster
+		NOT = { has_star_flag = lcluster }
+
+		# Formless system
+		NOT = { has_star_flag = formless_system }
+
+        # The Veiled Cluster
+		NOT = { has_star_flag = tvc_system }
+	}
+}

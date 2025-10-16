@@ -14,6 +14,7 @@ tvc_home_system_initializer = {
         radius = 325
     }
 
+    #flags = { tvc_home_system tvc_system empire_cluster empire_home_system sealed_system crisis_spawn_exclude }
     flags = { tvc_home_system tvc_system empire_cluster empire_home_system }
 
     usage = origin 

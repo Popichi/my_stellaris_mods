@@ -396,6 +396,7 @@ country_event = {
 	}
 }
 
+# TO DO: Record the file you got this code from to create nebulas!
 # spawn the Veiled Cluster
 system_event = {
 	id = tvc.5
