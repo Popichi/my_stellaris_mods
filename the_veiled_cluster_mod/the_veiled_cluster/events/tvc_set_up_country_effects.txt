@@ -1,0 +1,12 @@
+namespace = tvc
+
+country_event = {
+	id = tvc.6
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+        add_research_option = tech_wormhole_stabilization
+		give_technology = { tech = tech_psionic_theory message = no }   # or message = yes if you want a popup
+        log = "Added the Psionic research as already researched and Wormhole Stabilization research option for: [This.GetName]."
+    }
+}

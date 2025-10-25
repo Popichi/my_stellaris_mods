@@ -2,7 +2,15 @@ origin_tvc = {
 	is_origin = yes
 	icon = "gfx/interface/icons/origins/origins_the_veiled_cluster.dds"
 	picture = GFX_origin_tvc
+
+	max_once_global = yes
+
 	description = "origin_tvc_effects"
+	#flags = { custom_start_screen } --> What does this do,?
+
+	traits = {
+		trait = trait_psionic
+	}
 
 	# No random weights because weight = 0 does not actually mean 0 and the AI still takes it.
 	# No random_weight block removes it from the lists
