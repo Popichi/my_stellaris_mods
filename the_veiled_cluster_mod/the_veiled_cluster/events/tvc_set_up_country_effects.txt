@@ -5,8 +5,38 @@ country_event = {
 	hide_window = yes
 	is_triggered_only = yes
 	immediate = {
+		
+		# Add starting tech tied to the origin
         add_research_option = tech_wormhole_stabilization
+		if = {
+			limit = { NOT = { has_technology = tech_wormhole_stabilization } }
+			add_tech_progress = { tech = tech_wormhole_stabilization progress = 0.75 } # 75%
+		}
+
 		give_technology = { tech = tech_psionic_theory message = no }   # or message = yes if you want a popup
-        log = "Added the Psionic research as already researched and Wormhole Stabilization research option for: [This.GetName]."
+        log = "Added the Psionic research and wormhole stabilization research option (with 75% progress) for: [This.GetName]."
+
+		ruler = { 
+			add_trait = { trait = leader_trait_chosen }
+			add_trait = { trait = leader_trait_spark_of_genius }
+		}
+
+		# C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\traits\00_starting_ruler_traits.txt
+		# C:\Program Files (x86)\Steam\steamapps\common\Stellaris\common\scripted_effects\shroud_shadows_scripted_effects.txt: 3884
+
+		# ruler = {
+		# 	log = "Ruler's name is: [This.GetName]."
+		# 	add_trait = {
+		# 		trait = leader_trait_ruler_chosen
+		# 		show_message = no
+		# 	}
+
+		# 	add_trait = {
+		# 		trait = leader_trait_spark_of_genius
+		# 		show_message = no
+		# 	}
+
+		# 	#remove_trait = trait_old_trait    # remove trait
+		# }
     }
 }
